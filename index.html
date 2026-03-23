@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_blank" />
+    <meta charset="utf-8" />
+    <title>Parallel</title>
+  </head>
+  <style>
+
+      @import url('./p1-fonts.css');
+
+      body {
+          overflow: hidden;
+          background-color: rgb(254, 254, 254);
+          background-image: linear-gradient(10deg, rgb(235, 225, 225) 0%, rgb(254, 254, 254) 100%);
+      }
+
+      p, a {
+          font-size: calc(10px + 1.5vw);
+          font-family: Inter, "Noto Sans SC", sans-serif;
+          color: rgb(20, 20, 20);
+      }
+
+      a {
+          text-decoration: none;
+          font-weight: 900;
+          padding-inline: 1rem;
+          transition: ease 0.125s;
+          border-radius: 0.5rem;
+      }
+
+      a:hover {
+          background: white;
+          color: black;
+      }
+
+      ::selection {
+          color: #8d8d8d;
+      }
+
+      div.hover img {
+          opacity: 0;
+          transition: ease 0.125s;
+          background-color: rgb(254, 254, 254);
+      }
+
+      div.hover {
+          background-color: rgb(254, 254, 254);
+          border-radius: 2rem;
+          background-image: url(./images/parallel-theme-logo.svg);
+          background-size: auto calc(100% - 4rem);
+          background-position: center;
+          background-repeat: no-repeat;
+          padding: 2rem;
+      }
+
+      div.hover:hover img {
+          opacity: 1;
+      }
+
+  </style>
+  <body>
+
+<div style="display: flex; align-content: center; justify-content: center; align-items: center; flex-flow: column wrap; height: 100vh; width: auto; text-align: center;">
+
+    <div class="hover"><img src="./images/parallel-theme-logo-zh.svg" alt="basalt" style="width: calc(100px + 45vw);"></div>
+    <p><a href="https://scp-wiki-cn.wikidot.com/theme:parallel">平行</a></p>
+
+</div>
+
+<div style="position: absolute; bottom: 0.2rem; left: 2rem; user-select: none;">
+    <p style="font-size: 0.9rem;"> CC BY-SA 4.0 <span style="margin-left: 4rem;">基于基岩：EstrellaYoshte　Liryn　Placeholder McD, MIT License</span></p>
+</div>
+
+<div style="position: absolute; bottom: 0.2rem; right: 2rem; user-select: none;">
+    <p style="font-size: 0.9rem;">2026　Dr Hormress</p>
+</div>
+
+</body>
+</html>
