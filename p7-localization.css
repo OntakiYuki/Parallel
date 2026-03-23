@@ -1,5 +1,5 @@
 :root:where(:lang(cn)),
 :root:where(:lang(zh-CN)) {
-	--header-title: "SCP基金会";
-	--header-subtitle: "控制，收容，保护";
+	--title: "SCP基金会";
+	--subtitle: "控制，收容，保护";
 }

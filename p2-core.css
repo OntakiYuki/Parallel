@@ -1,72 +1,93 @@
-/* -------------- */
-/* ---- 变量 ---- */
-/* -------------- */
+/* == 变量 == */
 
 :root {
-	--basalt-primary-color: 254, 254, 254;
-	--basalt-secondary-color: 247, 248, 250;
-	--basalt-tertiary-color: 218, 219, 222;
-	--basalt-main-text-color: 20, 20, 20;
-	--basalt-overtone: 56, 60, 64;
-	--basalt-undertone: 61, 71, 202;
-	--basalt-bright-element-color: 16, 76, 184;
-	--basalt-dark-element-color: 18, 20, 150;
-	--basalt-alternate-color: 255, 132, 0;
-	--basalt-positive-color: 26, 180, 28;
-	--basalt-negative-color: 255, 48, 48;
+    --basalt-primary-color: 254, 254, 254;
+    --basalt-secondary-color: 239, 239, 240;
+    --basalt-tertiary-color: 219, 219, 222;
+    --basalt-main-text-color: 20, 20, 20;
+    --basalt-overtone: 20, 20, 20;
+    --basalt-undertone: 188, 30, 20;
+    --basalt-bright-element-color: 205, 40, 20;
+    --basalt-dark-element-color: 144, 20, 20;
+    --basalt-darker-element-color: 72, 20, 20;
+    --basalt-alternate-color: 232, 132, 20;
+    --basalt-positive-color: 24, 163, 20;
+    --basalt-negative-color: 255, 48, 48;
+    --basalt-sub-text-color: 128, 127, 130;
 	--basalt-cancel-color: var(--basalt-negative-color);
-	--basalt-sub-text-color: 155, 154, 162;
 	--basalt-light-text-color: var(--basalt-primary-color);
 	--basalt-UI-opacity: .875;
 	--basalt-UI-blur: .1rem;
 	--basalt-UI-dark-palette: var(--basalt-overtone);
 	--basalt-focus-color: var(--basalt-undertone);
+	--basalt-dark-focus-color: var(--basalt-UI-dark-palette);
 	--basalt-background-color: var(--basalt-primary-color);
 
 	--link-color: var(--basalt-bright-element-color);
 	--link-visited-color: var(--basalt-dark-element-color);
 	--link-newpage-color: var(--basalt-alternate-color);
 
-	--header-font-primary: 'Lexend';
-	--UI-font-primary: 'Jost';
-	--body-font-primary: 'InterVariable';
-	--mono-font-primary: 'JetBrains Mono';
-	--header-font-fallback: franklin gothic medium, franklin gothic, itc franklin gothic, 'Helvetica Neue', 'Helvetica', arial, sans-serif;
-	--UI-font-fallback: -apple-system, system-ui, blinkmacsystemfont, 'Segoe UI', roboto, oxygen-sans, ubuntu, cantrell, 'Helvetica Neue', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-	--body-font-fallback: blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-	--mono-font-fallback: menlo, consolas, monaco, liberation mono, lucida console, monospace;
+	--header-font-primary: 'Lexend', 'Noto Sans SC';
+	--UI-font-primary: 'Jost', 'Noto Sans SC';
+	--body-font-primary: 'Inter', 'Noto Sans SC';
+	--mono-font-primary: 'JetBrains Mono', 'Noto Serif SC';
+	--header-font-fallback: sans-serif;
+	--UI-font-fallback: sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--body-font-fallback: sans-serif;
+	--mono-font-fallback: monospace;
 	--header-font: var(--header-font-primary), var(--header-font-fallback);
 	--UI-font: var(--UI-font-primary), var(--UI-font-fallback);
 	--body-font: var(--body-font-primary), var(--body-font-fallback);
 	--mono-font: var(--mono-font-primary), var(--mono-font-fallback);
 
-	--header-logo: url('https://cdn.scpwiki.com/theme/en/basalt/basaltlogo.svg');
+    --header-title: var(--title);
+    --title: "SCP基金会";
+    --header-subtitle: var(--subtitle);
+    --subtitle: "控制，收容，保护";
+    --header-logo: var(--logo);
+    --logo: url("https://nu-scptheme.github.io/Black-Highlighter/img/logo.svg");
 	--header-logo-size: contain;
-	--header-title: 'SCP Foundation';
-	--header-subtitle: 'SECURE - CONTAIN - PROTECT';
-	--header-title-color: var(--basalt-main-text-color);
-	--header-subtitle-color: var(--header-title-color);
-	--title-size: 1.5rem;
-	--subtitle-size: .825rem;
+	--header-logo-position: center left;
+	--header-logo-mask: linear-gradient(to right, #000 0%, transparent 85%);
+	--header-logo-mask-size: cover;
+	--header-logo-mask-position: center;
+	--header-logo-right-margin: calc(var(--base-header-height) * -0.35);
+    --header-title-color: var(--basalt-primary-color);
+    --header-subtitle-color: var(--basalt-secondary-color);
+	--title-size: 2rem;
+	--subtitle-size: .8rem;
 	--base-header-height: calc((var(--title-size) + var(--subtitle-size)) *1.325 + .5rem);
-	--header-border-width: .125rem;
+	--header-border-width: 0rem;
 	--header-background-color: var(--basalt-secondary-color);
 	--header-border-color: var(--basalt-tertiary-color);
+	--header-gradient: linear-gradient(var(--header-gradient-rotation), rgba(var(--header-color-one), 0.75) 0%, rgb(var(--header-color-two)) 100%);
+    --header-gradient-rotation: -30deg;
+    --header-color-one: var(--basalt-dark-element-color);
+    --header-color-two: var(--basalt-darker-element-color);
+ 
+    --header-stripes: repeating-linear-gradient(var(--diagonal-stripes-angle), rgba(var(--diagonal-stripes-color), var(--diagonal-stripes-opacity)), rgba(var(--diagonal-stripes-color), var(--diagonal-stripes-opacity)) var(--diagonal-stripes-width), transparent var(--diagonal-stripes-width), transparent var(--diagonal-stripes-gap));
+    --diagonal-stripes-angle: -45deg;
+    --diagonal-stripes-width: 0.25rem;
+    --diagonal-stripes-gap: 0.5rem;
+    --diagonal-stripes-color: var(--basalt-primary-color);
+    --diagonal-stripes-opacity: 0.04;
+	--header-drop-shadow-opacity: 0.1;
+
 	--header-desktop-height: calc(var(--base-header-height) + var(--header-border-width));
 	--header-mobile-height: calc(var(--header-desktop-height) + var(--top-bar-mobile-height));
 	--header-final-height: var(--header-desktop-height);
 	--header-link-transition-1st: .15s ease .05s;
 	--header-link-transition-2nd: .205s ease-out .15s;
 	--top-bar-mobile-height: calc(var(--header-UI-font-size) *4.5);
-	--top-bar-link-color: var(--basalt-main-text-color);
+	--top-bar-link-color: var(--basalt-light-text-color);
 	--top-bar-link-color-hover: var(--basalt-light-text-color);
 	--top-bar-link-background-hover: var(--basalt-focus-color);
 	--top-bar-link-background-hover-alt: var(--basalt-UI-dark-palette);
-	--top-bar-dropdown-link-color: var(--top-bar-link-color);
+	--top-bar-dropdown-link-color: var(--basalt-darker-element-color);
 	--top-bar-dropdown-link-color-hover: var(--top-bar-link-color-hover);
 	--top-bar-dropdown-background: var(--basalt-primary-color);
 	--top-bar-dropdown-background-hover: var(--link-color);
-	--search-icon-color: var(--basalt-undertone);
+	--search-icon-color: var(--top-bar-link-color);
 	--search-icon-color-hover: var(--top-bar-link-color-hover);
 	--search-background-color: var(--basalt-background-color);
 	--search-button-width: 2rem;
@@ -85,37 +106,41 @@
 	--side-bar-button-color: var(--top-bar-link-color);
 	--side-bar-button-color-hover: var(--top-bar-link-color-hover);
 	--side-bar-button-background-hover: var(--top-bar-link-background-hover-alt);
-	--side-bar-width: 19rem;
+	--side-bar-width: 17rem;
 	--side-bar-transition: .25s ease .125s;
 	--side-bar-background-color: var(--basalt-background-color);
 	--side-bar-link-color: var(--basalt-main-text-color);
 	--side-bar-link-color-hover: var(--basalt-light-text-color);
 	--side-bar-link-background-hover: var(--link-color);
 	--side-bar-media-background-color: var(--basalt-undertone), .115;
-	--side-bar-resources-background-color: var(--basalt-alternate-color), .115;
-	--side-bar-heading-text-color: var(--basalt-light-text-color);
+	--side-bar-resources-background-color: var(--basalt-background-color);
+	--side-bar-heading-text-color: var(--UI-title-color);
 	--side-bar-heading-text-color-hover: var(--basalt-light-text-color);
-	--side-bar-heading-background-color: var(--basalt-UI-dark-palette);
-	--side-bar-unfolded-heading-text-color: var(--basalt-light-text-color);
-	--side-bar-unfolded-heading-background-color: var(--basalt-UI-dark-palette);
+	--side-bar-heading-border-color: var(--UI-title-color);
+	--side-bar-heading-border-color-hover: var(--UI-title-color);
+	--side-bar-heading-background-color: var(--UI-title-background-color);
+	--side-bar-heading-background-color-hover: var(--basalt-focus-color);
+	--side-bar-unfolded-heading-text-color: var(--UI-title-color);
+	--side-bar-unfolded-heading-background-color: var(--UI-title-background-color);
+	--side-bar-unfolded-heading-border-color: var(--UI-title-color);
 	--side-bar-link-transition: var(--header-link-transition-1st);
 	--side-bar-link-font-size: calc(var(--base-font-size)*.925);
 	--side-bar-link-small-font-size: calc(var(--side-bar-link-font-size)*.875);
 
-	--main-content-width: 67.5rem;
-	--main-content-top-margin: .325rem;
+	--main-content-width: 56rem;
+	--main-content-top-margin: 1rem;
 	--main-content-side-margin: 1.325rem;
 	--main-content-bottom-margin: var(--main-content-side-margin);
 
-	--bottom-area-text-color: var(--basalt-main-text-color);
-	--bottom-area-background-color: var(--basalt-secondary-color);
+	--bottom-area-text-color: var(--basalt-dark-element-color);
+	--bottom-area-background-color: var(--basalt-primary-color);
 	--bottom-area-padding: calc(var(--true-font-size) *.85);
-	--footer-divider-thickness: .075rem;
+	--footer-divider-thickness: 0rem;
 	--footer-divider-color: var(--basalt-tertiary-color);
-	--footer-link-color: var(--basalt-sub-text-color);
+	--footer-link-color: var(--basalt-darker-element-color);
 	--license-area-logo: var(--header-logo);
-	--license-area-logo-size: 2.75rem;
-	--license-area-divider-thickness: .1rem;
+	--license-area-logo-size: 0rem;
+	--license-area-divider-thickness: var(--base-border-width);
 	--license-area-divider-color: var(--basalt-tertiary-color);
 
 	--base-font-size: 1rem;
@@ -135,14 +160,18 @@
 	--selection-text-color: var(--basalt-light-text-color);
 	--selection-background-color: var(--basalt-focus-color);
 	
-	--title-border-color: var(--basalt-undertone);
-	--hr-color: var(--basalt-undertone);
+	--base-border-width: 0.2rem;
+	--thin-border-width: 0.1rem;
+	--base-border-radius: 0.5rem;
+	--title-border-color: var(--basalt-tertiary-color);
+	--hr-color: var(--basalt-secondary-color);
 	--rate-module-background-color: var(--basalt-secondary-color);
 	--rate-module-text-color: var(--basalt-main-text-color);
 	--rate-module-button-size: 1.625em;
 	--rate-module-upvote-color: var(--basalt-positive-color);
 	--rate-module-downvote-color: var(--basalt-negative-color);
 	--rate-module-cancel-color: var(--basalt-overtone);
+	--rate-module-credit-color: var(--basalt-overtone);
 	--rate-module-info-icon-color: var(--basalt-light-text-color);
 	--rate-module-info-background-color: var(--basalt-UI-dark-palette);
 	--button-text-color: var(--basalt-main-text-color);
@@ -153,11 +182,11 @@
 	--button-hover-background-color: var(--basalt-focus-color);
 	--button-hover-border-color: var(--basalt-focus-color);
 	--button-hover-transition: .095s ease-out .015s;
-	--general-border-color: var(--basalt-tertiary-color);
+	--general-border-color: var(--basalt-secondary-color);
 	--action-area-border-color: var(--general-border-color);
 	--blockquote-background-color: var(--basalt-secondary-color);
 	--blockquote-border-color: var(--general-border-color);
-	--blockquote-border-width: .0875rem;
+	--blockquote-border-width: var(--thin-border-width);
 	--code-background-color: var(--blockquote-background-color);
 	--toc-background-color: var(--blockquote-background-color);
 	--toc-border-color: var(--blockquote-border-color);
@@ -168,11 +197,15 @@
 	--tab-focus-text-color: var(--basalt-light-text-color);
 	--tab-border-width: var(--blockquote-border-width);
 	--tab-transition: .125s ease-out;
-	--image-caption-background-color: var(--basalt-background-color);
+	--image-caption-background-color: var(--basalt-secondary-color);
 	--image-block-border-color: var(--basalt-undertone);
 	--footnote-background-color: var(--basalt-secondary-color);
 	--tag-background-color: var(--basalt-secondary-color);
 	--modal-fader-background-color: var(--basalt-UI-dark-palette);
+	
+    --UI-title-color: var(--basalt-dark-element-color);
+    --UI-title-background-color: var(--basalt-secondary-color);
+	--owindow-title-height: 2.25rem;
 
 	--edit-area-border-color: var(--action-area-border-color);
 	--edit-area-border-width: .1rem;
@@ -185,9 +218,7 @@
 	--pager-next-button: "next »";
 }
 
-/* ---------------------- */
-/* ---- CONTENT AREA ---- */
-/* ---------------------- */
+/* == 内容区域 == */
 
 #container {
 	display: flex;
@@ -221,8 +252,10 @@
 	left: 0;
 	width: 100%;
 	box-sizing: border-box;
+	box-shadow: 0px 0px 8.5px -1px rgba(0, 0, 0, var(--header-drop-shadow-opacity)), 0px 0px 68px -21px rgba(0, 0, 0, calc(var(--header-drop-shadow-opacity) * 4));
 	height: var(--header-final-height);
 	background-color: rgb(var(--header-background-color));
+	background-image: var(--header-stripes), var(--header-gradient);
 	border-bottom: solid var(--header-border-width) rgb(var(--header-border-color));
 	grid-template-areas: 'open-menu h-link top-bar search user';
 	grid-template-columns: var(--side-bar-button-width) max-content 1fr var(--search-button-width) var(--user-button-width);
@@ -261,8 +294,8 @@
 	line-height: 1.15;
 	width: max-content;
 	gap: calc(var(--base-header-height) *.125);
-	padding-left: calc(var(--base-header-height) *.125);
-	padding-right: calc(var(--base-header-height) *.25);
+	padding-left: calc(var(--base-header-height) *.25);
+	padding-right: calc(var(--base-header-height) *.5);
 	letter-spacing: calc(var(--header-UI-font-size) * -.05);
 }
 
@@ -274,8 +307,17 @@
 	min-width: calc(var(--base-header-height) *.75);
 	background-image: var(--header-logo);
 	background-size: var(--header-logo-size);
-	background-position: center;
+	background-position: var(--header-logo-position);
 	background-repeat: no-repeat;
+    mask-image: var(--header-logo-mask);
+    mask-size: var(--header-logo-mask-size);
+    mask-position: var(--header-logo-mask-position);
+    mask-repeat: no-repeat;
+    -webkit-mask-image: var(--header-logo-mask);
+    -webkit-mask-size: var(--header-logo-mask-size);
+    -webkit-mask-position: var(--header-logo-mask-position);
+    -webkit-mask-repeat: no-repeat;
+	margin-right: var(--header-logo-right-margin);
 }
 
 #header h1 a span {
@@ -285,9 +327,7 @@
 	width: max-content;
 	height: 100%;
 	flex-direction: column;
-	align-items: center;
 	justify-content: center;
-	text-align: center;
 }
 
 #header h1 a span::before {
@@ -295,7 +335,7 @@
 	color: rgb(var(--header-title-color));
 	display: block;
 	font-size: var(--title-size);
-	font-weight: bold;
+	font-weight: 800;
 }
 
 #header h1 a span::after {
@@ -303,7 +343,7 @@
 	color: rgb(var(--header-subtitle-color));
 	display: block;
 	font-size: var(--subtitle-size);
-	font-weight: normal;
+	font-weight: 300;
 }
 
 /* --- TOP BAR --- */
@@ -719,8 +759,10 @@ a#account-topbutton, a#my-account {
 	height: min(calc(var(--user-button-width)/5), calc(var(--base-header-height)/4));
 	border-radius: calc(var(--user-button-width)/6);
 	background-color: rgb(var(--pm-indicator-color));
-	top: min(.625rem, 42.5%);
-	right: min(.325rem, calc(var(--user-button-width)/6));
+	top: 50%;
+	left: 50%;
+	right: unset;
+    transform: translate(calc(-50% + var(--user-button-width) / 2 - min(calc(var(--base-header-height) * .175), .625rem)), calc(-50% + var(--user-button-width) / 2 - min(calc(var(--base-header-height) * .175), .625rem)));
 	z-index: 3;
 	clip-path: unset;
 }
@@ -864,7 +906,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #search-top-box::before {
-	background-color: rgb(var(--basalt-focus-color));
+	background-color: rgb(var(--basalt-dark-focus-color));
 	height: 0;
 	transition: height var(--header-link-transition-1st);
 }
@@ -912,7 +954,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     opacity: 0;
     cursor: pointer;
     z-index: 3;
-    outline: solid 0 rgb(var(--basalt-focus-color));
+    outline: solid 0 rgb(var(--basalt-dark-focus-color));
     transition: width var(--header-link-transition-1st), outline-width var(--header-link-transition-1st), opacity var(--header-link-transition-1st);
     */
 }
@@ -1058,6 +1100,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 :is(#side-bar, #interwiki) .heading {
+	border-bottom: solid var(--base-border-width) rgb(var(--side-bar-heading-border-color));
 	background-color: rgb(var(--side-bar-heading-background-color));
 	color: rgb(var(--side-bar-heading-text-color));
 	font-family: var(--header-font);
@@ -1084,6 +1127,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 	position: relative;
 	display: block;
 	text-align: center;
+	border-bottom: solid var(--base-border-width) rgb(var(--side-bar-heading-border-color));
 	background-color: rgb(var(--side-bar-heading-background-color));
 	color: rgb(var(--side-bar-heading-text-color));
 	font-family: var(--header-font);
@@ -1095,13 +1139,15 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 }
 
 #side-bar .collapsible-block-unfolded a.collapsible-block-link {
+	border-color: rgb(var(--side-bar-unfolded-heading-border-color));
 	background-color: rgb(var(--side-bar-unfolded-heading-background-color));
 	color: rgb(var(--side-bar-unfolded-heading-text-color));
 }
 
 #side-bar .collapsible-block a.collapsible-block-link:is(:hover,:focus) {
 	text-decoration: none;
-	background-color: rgb(var(--basalt-focus-color));
+	border-color: rgb(var(--side-bar-heading-border-color-hover));
+	background-color: rgb(var(--side-bar-heading-background-color-hover));
 	color: rgb(var(--side-bar-heading-text-color-hover));
 }
 
@@ -1114,7 +1160,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 	position: absolute;
 	top: 0;
 	right: 0;
-	background-color: rgb(var(--basalt-focus-color), .5);
+	background-color: rgb(var(--side-bar-heading-background-color-hover), .5);
 	z-index: 1;
 }
 
@@ -1139,9 +1185,9 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: .425rem;
+	width: var(--base-border-width);
 	height: 100%;
-	background-color: rgb(var(--side-bar-unfolded-heading-background-color));
+	background-color: rgb(var(--side-bar-unfolded-heading-text-color));
 	animation: blt-collapsible-expand var(--side-bar-link-transition) forwards;
 }
 
@@ -1162,6 +1208,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 :is(#side-bar, #interwiki) .menu-item,
 :is(#side-bar, #interwiki) .menu-item.small {
 	display: flex;
+	flex-wrap: wrap;
 	font-size: 0;
 }
 
