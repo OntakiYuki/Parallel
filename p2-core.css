@@ -138,11 +138,13 @@
     --bottom-area-padding: calc(var(--true-font-size) *.85);
     --footer-divider-thickness: 0rem;
     --footer-divider-color: var(--basalt-tertiary-color);
+	--footer-border-color: var(--general-border-color);
     --footer-link-color: var(--basalt-darker-element-color);
     --license-area-logo: var(--header-logo);
     --license-area-logo-size: 0rem;
     --license-area-divider-thickness: var(--base-border-width);
     --license-area-divider-color: var(--basalt-tertiary-color);
+	--license-area-bottom-margin: 0rem;
 
     --base-font-size: 1rem;
     --true-font-size:
@@ -215,8 +217,8 @@
     --edit-area-main-background-color: var(--basalt-background-color);
     --edit-area-ancillary-background-color: var(--basalt-secondary-color);
 
-    --pager-previous-button: "« previous";
-    --pager-next-button: "next »";
+    --pager-previous-button: "« 前一页";
+    --pager-next-button: "后一页 »";
 }
 
 /* == 内容区域 == */
@@ -242,9 +244,7 @@
     min-height: calc(100vh - var(--header-final-height) - var(--main-content-top-margin) - 2.325em - var(--main-content-bottom-margin) - var(--bottom-area-padding) *2.5 - var(--true-font-size) *5.75);
 }
 
-/* ------------------ */
-/* ---- HEADER ---- */
-/* ------------------ */
+/* == 版头 == */
 
 #header {
     display: grid;
@@ -276,7 +276,7 @@
     text-decoration: none;
 }
 
-/* --- H1 LINK --- */
+/* -- H1 标题 -- */
 
 #header h1 {
     display: grid;
@@ -286,7 +286,7 @@
 
 #header h2 {
     display: none;
-} /* no need for this anymore, replaced with pseudo-element */
+}
 
 #header h1 a {
     display: flex;
@@ -347,12 +347,12 @@
     font-weight: 300;
 }
 
-/* --- TOP BAR --- */
+/* -- 顶部导航 -- */
 
 #top-bar,
 #top-bar div.top-bar,
 #top-bar div.mobile-top-bar {
-    display: contents; /* grid passthrough */
+    display: contents;
 }
 
 #top-bar div[class*='top-bar'] > ul {
@@ -664,7 +664,7 @@
     width: 100%;
 }
 
-/* second tier drop down support */
+/* 多级菜单支持 */
 #top-bar div[class*='top-bar'] ul li ul li ul {
     position: absolute;
     top: 0;
@@ -701,7 +701,7 @@
     color: rgb(var(--top-bar-link-color));
 }
 
-/* --- LOGIN-STATUS --- */
+/* -- 登录状态栏 -- */
 
 #login-status {
     grid-area: user;
@@ -782,7 +782,8 @@ a#account-topbutton, a#my-account {
     display: none;
 }
 
-/* PM notification indicator */
+/* 私信提醒 */
+
 #login-status > a[href*='account/messages'] {
     display: block;
     position: absolute;
@@ -865,7 +866,8 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     width: 100%;
 }
 
-/* logged out */
+/* 登出 */
+
 #login-status > a:first-child + span {
     display: block;
     width: 100%;
@@ -914,7 +916,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     inset-inline-end: calc(var(--login-status-width)/2);
 }
 
-/* --- SEARCH --- */
+/* -- 搜索 -- */
 
 #search-top-box {
     display: flex;
@@ -972,25 +974,6 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
 
 #search-top-box-input {
     display: none;
-
-    /*
-    position: absolute;
-    inset-block-start: 0;
-    inset-inline-end: 0;
-    height: 100%;
-    width: 100%;
-    color: transparent;
-    font-family: var(--body-font);
-    background-color: transparent;
-    margin: 0;
-    padding: calc(var(--header-UI-font-size)*0.5);
-    box-sizing: border-box;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 3;
-    outline: solid 0 rgb(var(--basalt-dark-focus-color));
-    transition: width var(--header-link-transition-1st), outline-width var(--header-link-transition-1st), opacity var(--header-link-transition-1st);
-    */
 }
 
 #search-top-box-form:focus-within #search-top-box-input,
@@ -1029,9 +1012,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     pointer-events: auto;
 }
 
-/* ---------------- */
-/* --- SIDE BAR --- */
-/* ---------------- */
+/* -- 侧面导航 -- */
 
 #top-bar div.mobile-top-bar > .open-menu {
     visibility: hidden;
@@ -1311,9 +1292,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     width: 100%;
 }
 
-/* ------------------------------- */
-/* ---- FOOTER & LICENSE AREA ---- */
-/* ------------------------------- */
+/* == 页底区域 == */
 
 #footer {
     display: grid !important;
@@ -1323,6 +1302,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     padding: var(--bottom-area-padding);
     font-family: var(--UI-font);
     color: rgb(var(--bottom-area-text-color));
+	border-top: solid var(--base-border-width) rgb(var(--footer-border-color));
     background-color: rgb(var(--bottom-area-background-color));
     box-sizing: border-box;
     padding-bottom: 0;
@@ -1368,7 +1348,7 @@ div#license-area {
     display: block;
     height: var(--license-area-logo-size);
     width: 100%;
-    margin-block-end: calc(var(--bottom-area-padding)/2);
+    margin-block-end: var(--license-area-bottom-margin);
 }
 
 #license-area::before {
@@ -1435,9 +1415,7 @@ div#license-area {
     text-align: center;
 }
 
-/* --------------------------- */
-/* ---- MOBILE BREAKPOINT ---- */
-/* --------------------------- */
+/* == 移动适配 -- */
 
 @media only screen and (max-width: 1024px) {
     :root {
@@ -1479,7 +1457,7 @@ div#license-area {
         padding: calc(var(--header-UI-dropdown-font-size) * .875) calc(var(--header-UI-dropdown-font-size) * 1.05);
     }
 
-    /* --- mobile side-bar --- */
+    /* -- 移动端侧面导航 -- */
 
     #top-bar div.mobile-top-bar > .open-menu {
         visibility: visible;
@@ -1529,9 +1507,7 @@ div#license-area {
     }
 }
 
-/* ------------------------ */
-/* ---- REDUCED MOTION ---- */
-/* ------------------------ */
+/* == 低动画模式 == */
 
 @media screen and (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -1541,9 +1517,7 @@ div#license-area {
 }
 
 
-/* ----------------------- */
-/* ---- PRINT SUPPORT ---- */
-/* ----------------------- */
+/* == 打印支持 == */
 
 div#print-options {
     font-size: var(--true-font-size);
