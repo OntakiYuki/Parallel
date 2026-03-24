@@ -1450,6 +1450,8 @@ div#license-area {
     #top-bar div[class*='top-bar'] ul li ul {
         transform: none;
         left: 0;
+        max-height: calc(100dvh - var(--top-bar-mobile-height));
+        overflow-y: auto;
     }
 
     #top-bar div[class*='top-bar'] ul li ul li a {

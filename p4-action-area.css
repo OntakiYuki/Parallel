@@ -55,7 +55,7 @@ div:where(#action-area, .buttons) :is(a, input).btn,
     font-family: var(--UI-font);
     color: rgb(var(--button-text-color));
     background-color: rgb(var(--button-background-color));
-    border: solid 0.125em rgb(var(--button-border-color));
+    border: solid var(--thin-border-width) rgb(var(--button-border-color));
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
 }
@@ -108,7 +108,7 @@ div:where(#action-area, .buttons) :is(a, input).btn:is(:hover, :focus),
     content: "";
     display: block;
     background-color: rgb(var(--action-area-border-color));
-    height: 0.1rem;
+    height: var(--thin-border-width);
     min-width: 2.5ch;
     flex-grow: 1;
 }
@@ -443,7 +443,7 @@ form:is(#edit-page-form, #new-post-form) > div:nth-of-type(2) { min-width: 100%;
 #edit-page-textarea, #np-text {
     min-width: inherit;
     min-height: calc(var(--true-font-size)*8);
-    font-family: var(--body-font);
+    font-family: var(--mono-font);
     padding: 1ch 0.5ch;
     color: rgb(var(--basalt-main-text-color));
     background-color: rgb(var(--edit-area-main-background-color));
@@ -706,7 +706,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     content: "";
     display: block;
     width: 100%;
-    height: 0.25rem;
+    height: var(--base-border-width);
     background-color: rgb(var(--basalt-UI-dark-palette));
 }
 
@@ -860,10 +860,10 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     display: block;
     background-color: inherit;
     position: absolute;
-    inset-block-start: calc(2em - 0.25rem);
+    inset-block-start: calc(2em - var(--base-border-width));
     left: 0;
     width: 100%;
-    height: 0.25rem;
+    height: var(--base-border-width);
 }
 
 #main-content .pager > span.current {
@@ -991,7 +991,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     grid-area: dv;
     content: "";
     display: block;
-    height: 0.15rem;
+    height: var(--thin-border-width);
     width: 0;
     background: rgb(var(--basalt-UI-dark-palette));
     transition: width 0.25s ease-out;

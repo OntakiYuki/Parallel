@@ -32,7 +32,7 @@ img, table, iframe {
 
 #page-content div { max-width: 100%; }
 
-/* scrollbar */
+/* 滚动条 */
 * {
     scrollbar-width: thin;
     scrollbar-color: rgb(var(--scrollbar-thumb-color)) rgb(var(--scrollbar-track-color));
@@ -48,13 +48,13 @@ img, table, iframe {
     background-color: rgb(var(--scrollbar-thumb-color));
 }
 
-/* selection */
+/* 选区 */
 ::selection {
     background-color: rgb(var(--selection-background-color), 0.875);
     color: rgb(var(--selection-text-color));
 }
 
-/* id scroll jump */
+/* 锚点跳转 */
 :where(#main-content) [id] {
     scroll-margin-top: var(--header-final-height);
 }
@@ -62,9 +62,7 @@ img, table, iframe {
     :where(#main-content) [id] { --header-final-height: var(--top-bar-mobile-height); }
 }
 
-/*---------------*/
-/*--- HEADERS ---*/
-/*---------------*/
+/* == 标题 == */
 
 h1,h2,h3,h4,h5,h6 {
     color: inherit;
@@ -80,9 +78,7 @@ h4 { font-size: 1.325em; }
 h5 { font-size: 1.15em; }
 h6 { font-size: 1em; }
 
-/*-------------*/
-/*--- LINKS ---*/
-/*-------------*/
+/* == 链接 == */
 
 a:any-link {
     color: rgb(var(--link-color));
@@ -100,14 +96,12 @@ a.newpage {
     color: rgb(var(--link-newpage-color));
 }
 
-/* collapsible link*/
+/* 折叠链接 */
 #page-content a.collapsible-block-link {
     overflow-wrap: anywhere;
 }
 
-/*---------------*/
-/*--- BUTTONS ---*/
-/*---------------*/
+/* == 按钮 == */
 
 div.buttons input, input[type="button"], input[type="submit"], button {
     appearance: none;
@@ -231,12 +225,10 @@ table td {
     padding: 0.5em 0.625em;
 }
 
-/*----------*/
-/*--- HR ---*/
-/*----------*/
+/* == 分割线 == */
 
 hr {
-    height: 0.1rem;
+    height: var(--base-border-width);
     margin: 1.5rem auto;
     background-color: rgb(var(--hr-color));
 }
@@ -412,7 +404,7 @@ div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus)::before { backgr
 div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before,
 div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-focus-color)); }
 
-/* info modal */
+/* 信息栏 */
 
 #u-credit-view, #u-credit-otherwise {
     justify-content: center;
@@ -707,7 +699,7 @@ div#toc {
     margin: 0.25rem 1.5rem 0.25rem 0;
 }
 
-/* non-float toc */
+/* 非浮动目录 */
 table[style^="margin:0;"][style*="margin:0;"],
 table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     display: contents;
@@ -1019,11 +1011,13 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     display: none;
 }
 
-/*---------------*/
-/*--- OWINDOW ---*/
-/*---------------*/
+/* == OWINDOW 悬浮窗口 == */
 
-.odialog-shader, .odialog-shader-iframe { display: none; }
+.odialog-shader,
+.odialog-shader-iframe {
+    display: none;
+}
+
 #odialog-container[style*="block"] {
     display: flex!important;
     justify-content: center;
@@ -1045,11 +1039,13 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     max-width: 80ch;
     display: grid;
 }
+
 .owindow h1 {
     margin: 0;
     text-align: center;
     flex-grow: 1;
 }
+
 .owindow p { margin: 0.5em 0; }
 
 .owindow > *:not(.button-bar,.title) {
@@ -1060,6 +1056,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     align-items: center;
     justify-content: center;
 }
+
 .owindow .title {
     cursor: initial;
     font-family: var(--header-font);
@@ -1067,12 +1064,13 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     font-weight: bold;
     text-transform: uppercase;
     padding: 0 0.75em;
-    color: rgb(var(--basalt-light-text-color));
-    background-color: rgb(var(--basalt-UI-dark-palette));
-    height: 2.75rem;
+    color: rgb(var(--UI-title-color));
+    background-color: rgb(var(--UI-title-background-color));
+    height: var(--owindow-title-height);
     display: flex;
     align-items: center;
 }
+
 .owindow .button-bar {
     margin: 0;
     padding: 0.5rem;
@@ -1081,6 +1079,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     justify-content: center;
     gap: 0.5rem;
 }
+
 .owindow .button-bar > a:not([onclick*="cleanAll"]),
 .owindow div[style*="margin-top"] a {
     margin: 0;
@@ -1093,10 +1092,11 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     text-decoration: none;
     color: rgb(var(--button-text-color));
     background-color: rgb(var(--button-background-color));
-    border: solid 0.125em rgb(var(--button-border-color));
+    border: solid var(--thin-border-width) rgb(var(--button-border-color));
     outline: rgb(var(--button-outline-color)) solid 0;
     transition: all var(--button-hover-transition);
 }
+
 .owindow .button-bar > a:not([onclick*="cleanAll"]):is(:hover, :focus),
 .owindow div[style*="margin-top"] a:is(:hover, :focus) {
     color: rgb(var(--button-hover-text-color));
@@ -1104,14 +1104,18 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     border-color: rgb(var(--button-hover-border-color));
     outline-width: 0.25rem;
 }
-.owindow .button-bar > a, .owindow .button-bar > a:hover { background: transparent; }
+
+.owindow .button-bar > a, .owindow .button-bar > a:hover {
+    background: transparent;
+}
 
 .owindow .button-bar > a[onclick*="cleanAll"] {
     position: absolute;
     inset-block-start: 0; inset-inline-end: 0;
     display: block;
     border: none;
-    height: 2.75rem; width: 2.75rem;
+    width: var(--owindow-title-height);
+    height: var(--owindow-title-height);
     font-size: 0;
     background-image: linear-gradient(to bottom, rgb(var(--basalt-cancel-color)), rgb(var(--basalt-cancel-color)));
     background-size: 100% 0;
@@ -1135,15 +1139,19 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     display: block;
     width: 100%;
     height: 100%;
-    background: rgb(var(--basalt-light-text-color));
+    background: rgb(var(--UI-title-color));
     -webkit-mask-image: var(--modal-close-mask);
-                  mask-image: var(--modal-close-mask);
+    mask-image: var(--modal-close-mask);
     -webkit-mask-position: 50%;
-                  mask-position: 50%;
+    mask-position: 50%;
     -webkit-mask-size: contain;
-                  mask-size: contain;
+    mask-size: contain;
     -webkit-mask-repeat: no-repeat;
-                  mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition: background-color 125ms ease-out;
+}
+.owindow .button-bar > a[onclick*="cleanAll"]:is(:hover,:focus)::after {
+    background-color: rgb(var(--UI-title-background-color));
 }
 
 .owindow.owait .content {
@@ -1173,15 +1181,15 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     }
 }
 @keyframes blt-load-pulsate {
-  0% {
-    box-shadow: 0 0 0 0 rgb(var(--basalt-undertone), 0.5), inset 0 0 0 0 rgb(var(--basalt-undertone), 0.375);
-  }
-  70% {
-    box-shadow: 0 0 0 0.675rem rgb(var(--basalt-undertone), 0), inset 0 0 0 0.45rem rgb(var(--basalt-undertone), 0);
-  }
+    0% {
+        box-shadow: 0 0 0 0 rgb(var(--basalt-undertone), 0.5), inset 0 0 0 0 rgb(var(--basalt-undertone), 0.375);
+    }
+    70% {
+        box-shadow: 0 0 0 0.675rem rgb(var(--basalt-undertone), 0), inset 0 0 0 0.45rem rgb(var(--basalt-undertone), 0);
+    }
     100% {
-    box-shadow: 0 0 0 0 rgb(var(--basalt-undertone), 0), inset 0 0 0 0 rgb(var(--basalt-undertone), 0);
-  }
+        box-shadow: 0 0 0 0 rgb(var(--basalt-undertone), 0), inset 0 0 0 0 rgb(var(--basalt-undertone), 0);
+    }
 }
 
 /*--- User Info Modal ---*/
@@ -1200,7 +1208,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 .owindow > .content.modal-body > img + h1 + table {
     display: grid;
     border: solid rgb(var(--basalt-tertiary-color));
-    border-width: 0.1em 0;
+    border-width: var(--thin-border-width) 0;
     max-height: 47.5vh;
     overflow-y: auto;
 }
@@ -1212,7 +1220,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     padding: 0.5em;
 }
 .owindow > .content.modal-body > img + h1 + table > tbody > tr:not(:last-child) {
-    border-bottom: solid 0.1em rgb(var(--basalt-tertiary-color));
+    border-bottom: solid var(--thin-border-width) rgb(var(--basalt-tertiary-color));
 }
 .owindow > .content.modal-body > img + h1 + table > tbody > tr > td {
     display: block;
@@ -1235,7 +1243,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     --button-text-color: var(--basalt-cancel-color);
 }
 
-/* Flag User */
+/* 标记用户 */
 :is(#flag-user-options-flag, #flag-user-options-unflag):not([style*="none"]) {
     display: flex!important;
     margin: 0;
@@ -1275,16 +1283,14 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 #flag-user-options-flag a.flag-user-abusive { --button-text-color: var(--basalt-negative-color); }
 #flag-user-options-unflag a.unflag-user-ok { --button-text-color: var(--basalt-positive-color); }
 
-/*-----------------*/
-/*---- CONTENT ----*/
-/*-----------------*/
+/* == 内容区域 == */
 
 #page-title, .meta-title {
     font-family: var(--header-font);
     font-weight: bold;
     font-size: 2.325em;
     line-height: normal;
-    border-bottom: solid 0.125rem rgb(var(--title-border-color));
+    border-bottom: solid var(--base-border-width) rgb(var(--title-border-color));
     padding: .125em 0;
     margin: 0;
 }
@@ -1423,7 +1429,7 @@ div[id*="page-options-bottom"] > a {
     font-size: calc(var(--true-font-size)*0.875);
     color: rgb(var(--button-text-color));
     text-decoration: none;
-    border-bottom: solid 0.05em rgb(var(--general-border-color));
+    border-bottom: solid var(--base-border-width) transparent;
     transition: all var(--button-hover-transition);
 }
 div[id*="page-options-bottom"] > a:is(:hover,:focus) {
