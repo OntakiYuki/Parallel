@@ -241,9 +241,7 @@ hr {
     background-color: rgb(var(--hr-color));
 }
 
-/*--------------------------*/
-/*--- RATE & INFO MODULE ---*/
-/*--------------------------*/
+/* == 评分与信息栏 == */
 
 .creditRate > .rateBox,
 .rate-box-with-credit-button > .page-rate-widget-box {
@@ -268,7 +266,7 @@ div.page-rate-widget-box, div.rate-box-with-credit-button {
     border: none;
     border-radius: 0;
     margin: 0.25rem 0;
-    padding: 0.325em;
+    padding: var(--base-border-width);
     text-align: center;
 }
 
@@ -294,14 +292,21 @@ div.page-rate-widget-box .rate-points {
 div.page-rate-widget-box span.btn {
     display: block;
     width: var(--rate-module-button-size);
-    height: var(--rate-module-button-size);
 }
+
 div.rate-box-with-credit-button .creditButton {
     display: block;
     width: var(--rate-module-button-size);
-    height: var(--rate-module-button-size);
     padding-inline-start: 0.325em;
 }
+
+div.page-rate-widget-box span.btn,
+div.rate-box-with-credit-button .creditButton {
+    padding: 0;
+    height: calc(var(--rate-module-button-size) + var(--base-border-width));
+    margin-block-end: calc(var(--base-border-width) * -1);
+}
+
 div.rate-box-with-credit-button .creditButton > p,
 div.creditRate > p {
     display: contents;
@@ -334,9 +339,12 @@ div.creditButtonStandalone > p > a {
     position: relative;
 }
 
-div.page-rate-widget-box span.btn > a { border-bottom: solid 0.05em rgb(var(--general-border-color)); }
+div.page-rate-widget-box span.btn > a,
+div.rate-box-with-credit-button .creditButton > p > a {
+    border-bottom: solid var(--base-border-width) transparent;
+}
+
 div.page-rate-widget-box span.btn > a::before,
-div.rate-box-with-credit-button .creditButton > p > a::before,
 div.rate-box-with-credit-button .creditButton > p > a::after,
 div.creditButtonStandalone > p > a::before,
 div.creditButtonStandalone > p > a::after {
@@ -350,13 +358,19 @@ div.creditButtonStandalone > p > a::after {
     left: 0;
     transition: background-color 0.095s linear;
 }
+
 div.rate-box-with-credit-button .creditButton > p > a::before,
 div.creditButtonStandalone > p > a::before {
-    background-color: rgb(var(--rate-module-info-background-color));
+    display: none;
 }
+
 div.rate-box-with-credit-button .creditButton > p > a::after,
 div.creditButtonStandalone > p > a::after {
     background-color: rgb(var(--rate-module-info-icon-color));
+}
+
+div.rate-box-with-credit-button .creditButton > p > a:hover {
+    border-block-end-color: rgb(var(--rate-module-credit-color));
 }
 
 div.page-rate-widget-box span.btn > a::before,
@@ -417,6 +431,11 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     -webkit-backdrop-filter: blur(var(--basalt-UI-blur));
     backdrop-filter: blur(var(--basalt-UI-blur));
 }
+
+:is(#u-credit-view, #u-credit-otherwise) :is(.fader iframe, .fader a) {
+    border: none;
+}
+
 :is(#u-credit-view, div#u-credit-otherwise) .modalbox {
     position: relative;
     display: flex;
@@ -442,7 +461,6 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
 :is(#u-credit-view, #u-credit-otherwise) .modalbox > div:first-child > h2 {
     color: rgb(var(--basalt-light-text-color));
 }
-
 
 .modalbox .close-credits {
     display: contents;
@@ -512,7 +530,7 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     box-sizing: border-box;
 }
 .image-block, .scp-image-block {
-    border-bottom: solid 0.325rem rgb(var(--basalt-undertone));
+    border-bottom: solid var(--base-border-width) rgb(var(--basalt-undertone));
     width: 300px;
     background: rgb(var(--image-caption-background-color));
 }

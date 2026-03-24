@@ -175,8 +175,7 @@
     --rate-module-downvote-color: var(--basalt-negative-color);
     --rate-module-cancel-color: var(--basalt-overtone);
     --rate-module-credit-color: var(--basalt-overtone);
-    --rate-module-info-icon-color: var(--basalt-light-text-color);
-    --rate-module-info-background-color: var(--basalt-UI-dark-palette);
+    --rate-module-info-icon-color: var(--basalt-main-text-color);
     --button-text-color: var(--basalt-main-text-color);
     --button-background-color: var(--basalt-secondary-color);
     --button-border-color: var(--basalt-tertiary-color);

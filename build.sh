@@ -11,7 +11,7 @@ mkdir -p dist
 cp images/* dist
 
 # Merge and minify CSS files
-cat p?-*.css > dist/basalt-bedrock.css
+cat p?-*.css > dist/parallel.css
 npm run minify:bedrock
 
 cat normalize*.css > dist/normalize.css
