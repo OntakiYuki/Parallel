@@ -753,33 +753,35 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 #toc-list > div[style*="5em"] { font-size: 0.835em; --toc-entry-indent: 5.075em; }
 #toc-list > div[style*="6em"] { font-size: 0.775em; --toc-entry-indent: 6.25em; }
 
-/*------------*/
-/*--- TABS ---*/
-/*------------*/
+/* == YUI TAB == */
 
+.yui-navset,
 .yui-navset.yui-navset-top {
     display: flex;
     flex-direction: column;
     margin: 0.75rem 0;
     clear: both;
 }
+.yui-navset > ul.yui-nav,
 .yui-navset.yui-navset-top > ul.yui-nav {
     display: flex;
     flex-wrap: wrap;
     border: none;
-    font-family: var(--mono-font);
+    font-family: var(--body-font);
     font-size: 0.95em;
-    gap: 0.05rem;
-    background-color: rgb(var(--general-border-color));
+    background-color: rgb(var(--tab-background-color));
 }
+.yui-navset > ul.yui-nav li,
 .yui-navset.yui-navset-top > ul.yui-nav li {
     margin: 0;
     padding: 0;
     flex-grow: 1;
-    background-color: rgb(var(--tab-background-color));
+    background-color: transparent;
     position: relative;
     isolation: isolate;
+    border-bottom: solid var(--base-border-width) rgb(var(--general-border-color));
 }
+.yui-navset > ul.yui-nav li a,
 .yui-navset.yui-navset-top > ul.yui-nav li a {
     display: flex;
     width: 100%; height: 100%;
@@ -794,39 +796,31 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     box-sizing: border-box;
     transition: all var(--tab-transition);
 }
-.yui-navset.yui-navset-top > ul.yui-nav li a:is(:hover, :focus),
-.yui-navset.yui-navset-top > ul.yui-nav li.selected a {
-    color: rgb(var(--tab-focus-text-color));
-}
+.yui-navset > ul.yui-nav li::before,
 .yui-navset.yui-navset-top > ul.yui-nav li::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
     display: block;
     width: 0; height: 100%;
-    background-color: rgb(var(--tab-hover-background-color));
+    background-color: transparent;
     transition: all var(--tab-transition);
+    border-bottom: solid var(--base-border-width) rgb(var(--tab-hover-background-color));
 }
+.yui-navset > ul.yui-nav li:is(:hover, :focus-within)::before,
 .yui-navset.yui-navset-top > ul.yui-nav li:is(:hover, :focus-within)::before {
     width: 100%;
 }
-.yui-navset.yui-navset-top > ul.yui-nav li.selected { z-index: 1; font-weight: bold; }
+.yui-navset > ul.yui-nav li.selected,
+.yui-navset.yui-navset-top > ul.yui-nav li.selected {
+    z-index: 1; font-weight: bold;
+}
+.yui-navset > ul.yui-nav li.selected::before,
 .yui-navset.yui-navset-top > ul.yui-nav li.selected::before {
     width: 100%;
-    background-color: rgb(var(--tab-selected-background-color));
+    border-bottom-color: rgb(var(--tab-selected-background-color));
 }
-.yui-navset.yui-navset-top > ul.yui-nav li.selected::after {
-    content: "";
-    display: block;
-    width: 0; height: 0;
-    border-style: solid;
-    border-color: rgb(var(--tab-selected-background-color)) transparent transparent transparent;
-    border-width: 0.575rem;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-}
+.yui-navset > ul.yui-nav li a em,
 .yui-navset.yui-navset-top > ul.yui-nav li a em {
     display: inline;
     border: none;
@@ -834,8 +828,10 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     top: 0;
     position: static;
 }
+.yui-navset .yui-content,
 .yui-navset.yui-navset-top .yui-content {
     border: solid var(--tab-border-width) rgb(var(--general-border-color));
+    border-top: none;
     padding: 0.625rem 1rem;
     background-color: transparent;
 }
