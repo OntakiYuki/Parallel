@@ -1,6 +1,4 @@
-/*-------------*/
-/*--- 基本元素 ---*/
-/*-------------*/
+/* == 基本元素 == */
 
 body {
     color: rgb(var(--basalt-main-text-color));
@@ -122,9 +120,7 @@ div.buttons input, input[type="button"], input[type="submit"], button {
     outline-width: 0.25rem;
 }
 
-/*--------------*/
-/*--- INPUTS ---*/
-/*--------------*/
+/* == INPUT 元素 == */
 
 input[type="checkbox"], [type="radio"] {
     appearance: none;
@@ -197,9 +193,7 @@ select:focus {
     outline-width: 0.175rem;
 }
 
-/*-------------*/
-/*--- TABLE ---*/
-/*-------------*/
+/* == 表格 == */
 
 table td {
     text-align: start;
@@ -512,9 +506,7 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     margin-block-end: 0.5rem;
 }
 
-/*-------------------*/
-/*--- IMAGE BLOCK ---*/
-/*-------------------*/
+/* == 图片块 == */
 
 #page-content :is(.image-block, .scp-image-block),
 #page-content :is(.image-block, .scp-image-block) > * {
@@ -559,9 +551,7 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     }
 }
 
-/*------------------*/
-/*--- BLOCKQUOTE ---*/
-/*------------------*/
+/* == 引用块 == */
 
 blockquote, div.blockquote {
     background-color: rgb(var(--blockquote-background-color));
@@ -575,9 +565,7 @@ blockquote, div.blockquote {
     max-width: calc(var(--main-content-width)*0.825);
 }
 
-/*------------*/
-/*--- NOTE ---*/
-/*------------*/
+/* == 笔记块 == */
 
 div.wiki-note {
     width: min(100%,calc(var(--main-content-width)*0.5));
@@ -589,9 +577,7 @@ div.wiki-note {
     text-align: justify;
 }
 
-/*--------------------*/
-/*--- NEW PAGE BOX ---*/
-/*--------------------*/
+/* == 新页面框 == */
 
 .new-page-box {
     font-size: var(--true-font-size);
@@ -615,9 +601,7 @@ div.wiki-note {
     font-family: var(--mono-font);
 }
 
-/*-------------------*/
-/*--- ERROR BLOCK ---*/
-/*-------------------*/
+/* == 错误提示信息 == */
 
 .error-block {
     margin: 0.5rem;
@@ -631,9 +615,7 @@ div.wiki-note {
     border: 0.05em solid currentColor;
 }
 
-/*------------------*/
-/*--- CODE BLOCK ---*/
-/*------------------*/
+/* == 代码块 == */
 
 .code {
     background-color: rgb(var(--code-background-color));
@@ -674,9 +656,7 @@ div.wiki-note {
 .code .hl-quotes { color: rgb(var(--_quotes)); }
 .code .hl-var { color: rgb(var(--_var)); }
 
-/*------------------------*/
-/*--- TABLE OF CONTENT ---*/
-/*------------------------*/
+/* == 目录 == */
 
 div#toc {
     max-width: calc(var(--main-content-width)*0.375);
@@ -836,9 +816,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     background-color: transparent;
 }
 
-/*-------------------------------*/
-/*--- FOOTNOTE & BIBLIOGRAPHY ---*/
-/*-------------------------------*/
+/* == 脚注和参考文献 == */
 
 .bibitems, .footnotes-footer {
     position: relative;
@@ -847,15 +825,15 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     padding-block-end: 0.5rem;
     padding-inline-end: 1.25rem;
     background: rgb(var(--footnote-background-color));
-    margin: 1.25rem 0;
+    margin: 2rem 0 1.25rem;
     height: auto;
     clear: both;
 }
 .bibitems::before, .footnotes-footer::before {
     content: "";
     position: absolute;
-    width: 0.35rem;
-    height: 100%;
+    width: 100%;
+    height: var(--base-border-width);
     inset-block-start: 0;
     inset-inline-start: 0;
     background-color: rgb(var(--basalt-UI-dark-palette));
@@ -870,8 +848,8 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     padding: 0.25em 0.5em;
     position: relative;
     margin: 0;
-    margin-block-end: -0.5rem;
-    inset-block-start: -0.75rem;
+    margin-block-end: -1.2em;
+    inset-block-start: calc(var(--true-font-size) * -1.5 - 0.45em);
 }
 .bibitems {
     counter-reset: bibindex;
@@ -880,7 +858,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 .bibitems .bibitem, .footnotes-footer .footnote-footer {
     height: auto;
     margin: 0.375em 0;
-    margin-inline-start: 2.75rem;
+    margin-inline-start: 2.5rem;
     text-indent: -0.575ch;
     position: relative;
 }
@@ -971,9 +949,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     color: rgb(var(--basalt-sub-text-color));
 }
 
-/*--------------------*/
-/*--- USER DISPLAY ---*/
-/*--------------------*/
+/* == 用户展示 == */
 
 .printuser a { margin-right: 0; }
 
@@ -1188,7 +1164,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     }
 }
 
-/*--- User Info Modal ---*/
+/* -- 用户信息块 -- */
 
 .owindow > *:not(.button-bar,.title) > img {
     float: none!important;
@@ -1313,9 +1289,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     text-align: center;
 }
 
-/*-----------------------*/
-/*---- PAGE TAG AREA ----*/
-/*-----------------------*/
+/* == 页面标签区域 == */
 
 #main-content > .page-tags {
     display: flex;
@@ -1358,9 +1332,8 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 
 #main-content > .page-tags > span a[href^='/system:page-tags/tag/_'] { display: none; }
 
-/*----------------------*/
-/*---- PAGE OPTIONS ----*/
-/*----------------------*/
+/* == 页底选项栏 == */
+
 #page-info-break {
     height: 1rem;
     margin: 0;
@@ -1479,9 +1452,7 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
     }
 }
 
-/*----------------*/
-/*---- CUSTOM ----*/
-/*----------------*/
+/* == 特殊元素 == */
 
 .licensebox a.collapsible-block-link {
     color: rgb(var(--basalt-sub-text-color));
