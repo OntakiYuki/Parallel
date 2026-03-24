@@ -15,7 +15,7 @@
   "scripts": {
     "build": "./build.sh",
     "clean": "rm -rf dist",
-    "minify:bedrock": "minify dist/basalt-bedrock.css > dist/basalt-bedrock-min.css",
+    "minify:parallel": "minify dist/parallel.css > dist/parallel-min.css",
     "minify:normalize": "minify dist/normalize.css > dist/normalize-min.css"
   }
 }
