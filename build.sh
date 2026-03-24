@@ -8,12 +8,11 @@ set -eu
 mkdir -p dist
 
 # Copy static files
-cp -a fonts dist
-cp images/* misc/* dist
+cp images/* dist
 
 # Merge and minify CSS files
 cat p?-*.css > dist/basalt-bedrock.css
 npm run minify:bedrock
 
-cp normalize.css dist/normalize.css
+cat normalize*.css > dist/normalize.css
 npm run minify:normalize

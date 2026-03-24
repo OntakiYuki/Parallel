@@ -1,9 +1,9 @@
 {
-  "name": "basalt-theme",
-  "description": "SCP Wiki theme (build process)",
-  "version": "1.0.0",
-  "authors": "Basalt Team",
-  "license": "MIT",
+  "name": "parallel-theme",
+  "description": "SCP-CN Wiki theme (build process)",
+  "version": "2.0.0",
+  "authors": "Dr Hormress",
+  "license": "CC BY-SA 4.0 International",
   "private": true,
   "repository": {
     "type": "git",
