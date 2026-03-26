@@ -218,8 +218,8 @@
     --edit-area-main-background-color: var(--basalt-background-color);
     --edit-area-ancillary-background-color: var(--basalt-secondary-color);
 
-    --pager-previous-button: "« 前一页";
-    --pager-next-button: "后一页 »";
+    --pager-previous-button: "« 上一页";
+    --pager-next-button: "下一页 »";
 }
 
 /* == 内容区域 == */

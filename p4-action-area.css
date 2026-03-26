@@ -908,6 +908,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 #main-content .pager > span.target:last-child > a { grid-area: nxt; }
 #main-content .pager > span.target:is(:nth-child(2), :last-child) > a {
     font-weight: bold;
+    font-size: 0;
     min-width: max-content;
     padding: 0 1ch;
     margin: 0;
@@ -936,8 +937,21 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     z-index: -1;
     cursor: not-allowed;
 }
-#main-content .pager::before { content: var(--pager-previous-button); grid-area: prv; }
-#main-content .pager::after { content: var(--pager-next-button); grid-area: nxt; }
+
+#main-content .pager > span:nth-child(2) > a::after,
+#main-content .pager::before {
+    content: var(--pager-previous-button);
+    grid-area: prv;
+}
+#main-content .pager > span:last-child > a::after,
+#main-content .pager::after {
+    content: var(--pager-next-button);
+    grid-area: nxt;
+}
+#main-content .pager > span.target:is(:nth-child(2), :last-child) > a::after {
+    font-size: var(--true-font-size);
+    grid-area: unset;
+}
 
 /*-------------------------------------*/
 
