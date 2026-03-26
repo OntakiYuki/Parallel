@@ -7,7 +7,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Basalt-Team/Basalt"
+    "url": "https://github.com/Hormress/Parallel"
   },
   "devDependencies": {
     "minify": "^9.2.0"
