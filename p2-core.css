@@ -40,10 +40,6 @@
     --body-font: var(--body-font-primary), var(--body-font-fallback);
     --mono-font: var(--mono-font-primary), var(--mono-font-fallback);
 
-    --header-title: var(--title);
-    --title: "SCP基金会";
-    --header-subtitle: var(--subtitle);
-    --subtitle: "控制，收容，保护";
     --header-logo: var(--logo);
     --logo: url("https://nu-scptheme.github.io/Black-Highlighter/img/logo.svg");
     --header-logo-size: contain;
@@ -52,8 +48,13 @@
     --header-logo-mask-size: cover;
     --header-logo-mask-position: center;
     --header-logo-right-margin: calc(var(--base-header-height) * -0.35);
+    --header-title: var(--title);
+    --title: "SCP基金会";
     --header-title-color: var(--basalt-primary-color);
+    --header-subtitle: var(--subtitle);
+    --subtitle: "控制，收容，保护";
     --header-subtitle-color: var(--basalt-secondary-color);
+    --header-subtitle-letter-spacing: 0.2rem;
     --title-size: 2rem;
     --subtitle-size: .8rem;
     --base-header-height: calc((var(--title-size) + var(--subtitle-size)) *1.325 + .5rem);
@@ -327,7 +328,6 @@
     font-family: var(--header-font);
     display: flex;
     width: max-content;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
 }
@@ -338,6 +338,7 @@
     display: block;
     font-size: var(--title-size);
     font-weight: 800;
+    line-height: 1;
 }
 
 #header h1 a span::after {
@@ -346,6 +347,7 @@
     display: block;
     font-size: var(--subtitle-size);
     font-weight: 300;
+    letter-spacing: var(--header-subtitle-letter-spacing);
 }
 
 /* -- 顶部导航 -- */
