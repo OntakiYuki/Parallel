@@ -1,6 +1,4 @@
-/* ----------------- */
-/* ----- 论坛样式 ----- */
-/* ----------------- */
+/* == 论坛样式 == */
 .forum-thread-box {
 	margin: 0;
 }
@@ -35,9 +33,7 @@
 	margin: 0;
 }
 
-/* -------------------- */
-/* ----- COMMENTS ----- */
-/* -------------------- */
+/* == 讨论串 == */
 
 #thread-container-posts {
 	display: flex;
@@ -55,7 +51,7 @@
 	padding-inline-start: 1.5rem;
 	margin-left: unset;
 	margin-inline-start: 0;
-	border-inline-start: solid .05rem rgb(var(--general-border-color));
+	border-inline-start: solid var(--base-border-width) rgb(var(--general-border-color));
 }
 
 .thread-container .post .head, .thread-container .post.folded .short {
@@ -188,9 +184,7 @@
 	margin-inline-end: .25ch;
 }
 
-/* ---------------------------- */
-/* ----- COMMENT TEXTAREA ----- */
-/* ---------------------------- */
+/* == 讨论编辑框 == */
 
 #new-post-div {
 	padding: 1rem 0;
