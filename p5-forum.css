@@ -33,6 +33,13 @@
 	margin: 0;
 }
 
+.forum-thread-box .action-area {
+	margin: 0;
+	padding: 0.5rem 1rem;
+	background-color: rgb(var(--basalt-background-color));
+	border: solid var(--base-border-width) rgb(var(--general-border-color));
+}
+
 /* == 讨论串 == */
 
 #thread-container-posts {
@@ -44,6 +51,11 @@
 .thread-container .post {
 	width: auto;
 	padding: 0;
+}
+
+.post-container.fordelete {
+	padding: 0.5rem;
+	border: solid var(--base-border-width) rgb(var(--basalt-negative-color));
 }
 
 .post-container .post-container {
