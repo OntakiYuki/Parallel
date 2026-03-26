@@ -189,6 +189,8 @@
     --blockquote-background-color: var(--basalt-secondary-color);
     --blockquote-border-color: var(--general-border-color);
     --blockquote-border-width: var(--thin-border-width);
+    --inside-blockquote-border-color: var(--basalt-tertiary-color);
+    --inside-hr-color: var(--basalt-tertiary-color);
     --code-background-color: var(--blockquote-background-color);
     --toc-background-color: var(--blockquote-background-color);
     --toc-border-color: var(--blockquote-border-color);

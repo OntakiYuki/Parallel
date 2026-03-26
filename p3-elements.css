@@ -206,16 +206,18 @@ table td {
     margin: 0.25rem auto;
     border-collapse: collapse;
 }
+
 :is(:where(#page-content) table:not(.form), table.wiki-content-table) th {
     background-color: rgb(var(--basalt-UI-dark-palette));
-    border-color: rgb(var(--basalt-UI-dark-palette));
+    border: solid var(--thin-border-width) rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
     padding: 0.5em 0.75em;
     font-family: var(--header-font);
     font-weight: bold;
 }
+
 :is(:where(#page-content) table:not(.form), table.wiki-content-table) td {
-    border: solid 0.05rem rgb(var(--general-border-color));
+    border: solid var(--thin-border-width) rgb(var(--general-border-color));
     padding: 0.5em 0.625em;
 }
 
@@ -559,10 +561,17 @@ blockquote, div.blockquote {
     margin: 1.25rem auto;
     padding: 0.125rem 1.45rem;
     box-sizing: border-box;
+    --_max-width: calc(var(--main-content-width)*0.825);
+}
+:is(blockquote, div.blockquote) :is(blockquote, div.blockquote) {
+    border-color: rgb(var(--inside-blockquote-border-color));
+}
+:is(blockquote, div.blockquote) hr {
+    background-color: rgb(var(--inside-hr-color));
 }
 #main-content blockquote,
 #main-content div.blockquote {
-    max-width: calc(var(--main-content-width)*0.825);
+    max-width: var(--_max-width);
 }
 
 /* == 笔记块 == */
@@ -883,6 +892,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     inset-block-start: 0;
     inset-inline-end: calc(100% + 0.25ch);
     background: rgb(var(--footnote-background-color));
+    white-space: nowrap;
 }
 
 .footnotes-footer .footnote-footer { text-indent: -0.875ch; }
@@ -894,6 +904,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     position: absolute;
     font-family: var(--mono-font);
     background-color: rgb(var(--footnote-background-color));
+    white-space: nowrap;
 }
 .footnotes-footer .footnote-footer > a:first-child::after { content: "."; }
 
@@ -904,7 +915,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     background-color: var(--_background-color)!important;
     border: var(--_border)!important;
     --_background-color: rgb(var(--footnote-background-color));
-    --_border: solid 0.125rem rgb(var(--general-border-color));
+    --_border: none;
     font-size: calc(var(--true-font-size)*0.95);
     animation: 0.1325s blt-hover-in forwards;
 }
@@ -921,20 +932,22 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     background-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
     width: max-content;
-    padding: 0.25ch 0.75ch;
+    padding: 0 0.75ch;
     font-family: var(--UI-font);
     position: absolute;
-    inset-block-start: -1em;
-    inset-inline-start: -0.125rem;
+    inset-block-start: calc(-1.5 * var(--true-font-size) + var(--base-border-width));
+    inset-inline-start: 0;
+    margin-block-end: -1rem;
 }
 .hovertip .content .footnote::before,
 .hovertip .content .reference::before {
     content: "";
     display: block;
     position: absolute;
-    height: 100%; width: 0.325rem;
-    inset-inline-start: -0.125rem;
-    inset-block-start: 0.125rem;
+    width: 100%;
+    height: var(--base-border-width);
+    inset-inline-start: 0;
+    inset-block-start: 0;
     background-color: rgb(var(--basalt-UI-dark-palette));
 }
 .hovertip .content .footnote .f-content,
@@ -1318,7 +1331,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     padding: 0.25em 0.475em;
     flex-grow: 1;
     background-color: rgb(var(--tag-background-color), var(--basalt-UI-opacity));
-    border-radius: 0 0.5em;
+    border-radius: 0.5rem;
     box-shadow: 0 0 0 0 rgb(var(--basalt-focus-color));
     transition: all var(--button-hover-transition);
 }
