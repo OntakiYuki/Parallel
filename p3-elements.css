@@ -555,7 +555,7 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
 
 /* == 引用块 == */
 
-blockquote, .blockquote {
+blockquote, div.blockquote {
     background-color: rgb(var(--blockquote-background-color));
     border: solid var(--blockquote-border-width) rgb(var(--blockquote-border-color));
     margin: 1.25rem auto;
@@ -564,14 +564,14 @@ blockquote, .blockquote {
     --_max-width: calc(var(--main-content-width)*var(--_relative-width));
     --_relative-width: 0.825;
 }
-:where(:is(blockquote, .blockquote)) :is(blockquote, .blockquote) {
+:where(:is(blockquote, div.blockquote)) :is(blockquote, div.blockquote) {
     border-color: rgb(var(--inside-blockquote-border-color));
 }
-:where(:is(blockquote, .blockquote)) hr {
+:where(:is(blockquote, div.blockquote)) hr {
     background-color: rgb(var(--inside-hr-color));
 }
 #main-content blockquote,
-#main-content .blockquote {
+#main-content div.blockquote {
     max-width: var(--_max-width);
 }
 
@@ -579,7 +579,7 @@ blockquote, .blockquote {
 
 div.wiki-note {
     width: min(100%,calc(var(--main-content-width)*0.5));
-    margin: 0.75rem auto;
+    margin: 1.25rem auto;
     padding: 0.25rem 1.5rem;
     box-sizing: border-box;
     border: none;
