@@ -167,6 +167,10 @@
     --base-border-width: 0.2rem;
     --thin-border-width: 0.1rem;
     --base-border-radius: 0.5rem;
+    --base-shadow: 0 0 0.5rem rgba(var(--base-shadow-color), 0.6);
+    --base-shadow-color: var(--basalt-undertone);
+    --thin-shadow: 0 0 0.2rem rgba(var(--base-shadow-color), 0.35);
+    --thick-shadow: 0 0 0.5rem rgb(var(--base-shadow-color));
     --title-border-color: var(--basalt-tertiary-color);
     --hr-color: var(--basalt-secondary-color);
     --rate-module-background-color: var(--basalt-secondary-color);
@@ -1485,6 +1489,7 @@ div#license-area {
     #side-bar:target {
         left: 0;
         width: var(--side-bar-width);
+        border: none;
         z-index: 10;
     }
 

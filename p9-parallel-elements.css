@@ -57,7 +57,7 @@
     --basalt-undertone: var(--six-color);
 }
 
-/* -- 引用块和相关容器 -- */
+/* -- 旧版引用块和相关容器 -- */
 
 :where(#page-content) .blockquote.wide {
     --_max-width: 100%;
@@ -422,4 +422,158 @@ div[style*="z-index:999;"] div#textWindow {
     height: 350px;
     opacity: 1;
 }
+}
+
+/* == 工具类 == */
+
+/* -- 通用 -- */
+
+.t-left {
+    text-align: left;
+}
+
+.t-right {
+    text-align: right;
+}
+
+.t-center {
+    text-align: center;
+}
+
+.t-justify {
+    text-align: justify;
+}
+
+.scroll-x {
+    overflow-x: auto;
+}
+
+/* -- Blockquote 元素 -- */
+
+.w-125 {
+    --_relative-width: .125;
+}
+
+.w-25 {
+    --_relative-width: .25;
+}
+
+.w-375 {
+    --_relative-width: .375;
+}
+
+.w-50 {
+    --_relative-width: .50;
+}
+
+.w-625 {
+    --_relative-width: .625
+}
+
+.w-75 {
+    --_relative-width: .75;
+}
+
+.w-875 {
+    --_relative-width: .875;
+}
+
+.w-full {
+    --_relative-width: 1;
+}
+
+.b-n {
+    border: none;
+}
+
+.b-l {
+    border-block: none;
+    border-right: none;
+}
+
+.b-r {
+    border-block: none;
+    border-left: none;
+}
+
+.b-lr {
+    border-block: none;
+}
+
+.b-t {
+    border-inline: none;
+    border-bottom: none;
+}
+
+.b-b {
+    border-inline: none;
+    border-top: none;
+}
+
+.b-tb {
+    border-inline: none;
+}
+
+.bwidth-base {
+    border-width: var(--base-border-width);
+}
+
+.bwidth-thin {
+    border-width: var(--thin-border-width);
+}
+
+.bcolor-pri {
+    border-color: rgb(var(--basalt-primary-color));
+}
+
+.bcolor-sec {
+    border-color: rgb(var(--basalt-secondary-color));
+}
+
+.bcolor-ter {
+    border-color: rgb(var(--basalt-tertiary-color));
+}
+
+.bcolor-overtone {
+    border-color: rgb(var(--basalt-overtone));
+}
+
+.bcolor-undertone {
+    border-color: rgb(var(--basalt-undertone));
+}
+
+.bcolor-dark {
+    border-color: rgb(var(--basalt-dark-element-color));
+}
+
+.bcolor-darker {
+    border-color: rgb(var(--basalt-darker-element-color));
+}
+
+.round {
+    border-radius: var(--base-border-radius);
+}
+
+.round-s {
+    border-radius: 0.2rem;
+}
+
+.round-m {
+    border-radius: 0.5rem;
+}
+
+.round-l {
+    border-radius: 1rem;
+}
+
+.shadow {
+    box-shadow: var(--base-shadow);
+}
+
+.shadow-thin {
+    box-shadow: var(--thin-shadow);
+}
+
+.shadow-thick {
+    box-shadow: var(--thick-shadow);
 }
