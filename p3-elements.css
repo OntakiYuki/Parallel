@@ -1050,8 +1050,9 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     font-weight: bold;
     text-transform: uppercase;
     padding: 0 0.75em;
-    color: rgb(var(--UI-title-color));
-    background-color: rgb(var(--UI-title-background-color));
+    color: rgb(var(--owindow-title-color));
+    background-color: rgb(var(--owindow-title-background-color));
+    border-bottom: solid var(--base-border-width) rgb(var(--owindow-title-border-color));
     height: var(--owindow-title-height);
     display: flex;
     align-items: center;

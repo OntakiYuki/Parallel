@@ -215,6 +215,9 @@
     --UI-title-color: var(--basalt-dark-element-color);
     --UI-title-background-color: var(--basalt-secondary-color);
     --owindow-title-height: 2.25rem;
+    --owindow-title-color: var(--UI-title-color);
+    --owindow-title-background-color: var(--UI-title-background-color);
+    --owindow-title-border-color: var(--UI-title-color);
 
     --edit-area-border-color: var(--action-area-border-color);
     --edit-area-border-width: .1rem;
