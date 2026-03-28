@@ -61,12 +61,12 @@
     --header-border-width: 0rem;
     --header-background-color: var(--basalt-secondary-color);
     --header-border-color: var(--basalt-tertiary-color);
-    --header-gradient: linear-gradient(var(--header-gradient-rotation), rgba(var(--header-color-one), 0.75) 0%, rgb(var(--header-color-two)) 100%);
+    --header-gradient: linear-gradient(var(--header-gradient-rotation), rgb(var(--header-color-one), 0.75) 0%, rgb(var(--header-color-two)) 100%);
     --header-gradient-rotation: -30deg;
     --header-color-one: var(--basalt-dark-element-color);
     --header-color-two: var(--basalt-darker-element-color);
  
-    --header-stripes: repeating-linear-gradient(var(--diagonal-stripes-angle), rgba(var(--diagonal-stripes-color), var(--diagonal-stripes-opacity)), rgba(var(--diagonal-stripes-color), var(--diagonal-stripes-opacity)) var(--diagonal-stripes-width), transparent var(--diagonal-stripes-width), transparent var(--diagonal-stripes-gap));
+    --header-stripes: repeating-linear-gradient(var(--diagonal-stripes-angle), rgb(var(--diagonal-stripes-color), var(--diagonal-stripes-opacity)), rgb(var(--diagonal-stripes-color), var(--diagonal-stripes-opacity)) var(--diagonal-stripes-width), transparent var(--diagonal-stripes-width), transparent var(--diagonal-stripes-gap));
     --diagonal-stripes-angle: -45deg;
     --diagonal-stripes-width: 0.25rem;
     --diagonal-stripes-gap: 0.5rem;
@@ -167,9 +167,9 @@
     --base-border-width: 0.2rem;
     --thin-border-width: 0.1rem;
     --base-border-radius: 0.5rem;
-    --base-shadow: 0 0 0.5rem rgba(var(--base-shadow-color), 0.6);
+    --base-shadow: 0 0 0.5rem rgb(var(--base-shadow-color), 0.6);
     --base-shadow-color: var(--basalt-overtone);
-    --thin-shadow: 0 0 0.2rem rgba(var(--base-shadow-color), 0.35);
+    --thin-shadow: 0 0 0.2rem rgb(var(--base-shadow-color), 0.35);
     --thick-shadow: 0 0 0.5rem rgb(var(--base-shadow-color));
     --title-border-color: var(--basalt-tertiary-color);
     --hr-color: var(--basalt-secondary-color);
@@ -262,7 +262,7 @@
     left: 0;
     width: 100%;
     box-sizing: border-box;
-    box-shadow: 0px 0px 8.5px -1px rgba(0, 0, 0, var(--header-drop-shadow-opacity)), 0px 0px 68px -21px rgba(0, 0, 0, calc(var(--header-drop-shadow-opacity) * 4));
+    box-shadow: 0px 0px 8.5px -1px rgb(0, 0, 0, var(--header-drop-shadow-opacity)), 0px 0px 68px -21px rgb(0, 0, 0, calc(var(--header-drop-shadow-opacity) * 4));
     height: var(--header-final-height);
     background-color: rgb(var(--header-background-color));
     background-image: var(--header-stripes), var(--header-gradient);

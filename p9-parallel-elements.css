@@ -600,5 +600,5 @@ div.bg-darker {
 }
 .bg-alter,
 div.bg-alter {
-    background-color: rgba(var(--basalt-alternate-color),.075);
+    background-color: rgb(var(--basalt-alternate-color),.075);
 }
