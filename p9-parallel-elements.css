@@ -602,3 +602,23 @@ div.bg-darker {
 div.bg-alter {
     background-color: rgb(var(--basalt-alternate-color),.075);
 }
+.color-light,
+div.color-light {
+    color: rgb(var(--basalt-light-text-color));
+}
+
+/* -- 表格元素 --*/
+
+.table[class*="w-"] :is(table, table.wiki-content-table) {
+    width: 100%;
+}
+.table[class*="w-"] {
+    margin-inline: auto;
+    width: calc(var(--main-content-width) * var(--_relative-width));
+}
+.table.b-3 :is(table, table.wiki-content-table) tr:nth-child(1) th {
+    border-bottom: solid var(--thin-border-width) rgb(var(--basalt-UI-dark-palette));
+}
+.table.b-d :is(table, table.wiki-content-table) td {
+    border-color: rgb(var(--basalt-UI-dark-palette));
+}

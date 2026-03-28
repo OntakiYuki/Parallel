@@ -850,7 +850,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 }
 .bibitems .title, .footnotes-footer .title {
     font-family: var(--UI-font);
-    font-size: var(--true-font-size);
+    font-size: calc(var(--true-font-size) * 0.8);
     font-weight: bold;
     background-color: rgb(var(--basalt-UI-dark-palette));
     color: rgb(var(--basalt-light-text-color));
@@ -859,7 +859,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     position: relative;
     margin: 0;
     margin-block-end: -1.2em;
-    inset-block-start: calc(var(--true-font-size) * -1.5 - 0.45em);
+    inset-block-start: calc(-1.95em);
 }
 .bibitems {
     counter-reset: bibindex;
