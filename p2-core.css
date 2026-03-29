@@ -89,6 +89,7 @@
     --top-bar-dropdown-background: var(--basalt-primary-color);
     --top-bar-dropdown-background-hover: var(--link-color);
     --top-bar-dropdown-width: 12rem;
+    --top-bar-dropdown-border-width: var(--base-border-width);
     --search-icon-color: var(--top-bar-link-color);
     --search-icon-color-hover: var(--top-bar-link-color-hover);
     --search-background-color: var(--basalt-background-color);
@@ -550,9 +551,9 @@
 
 #top-bar div[class*="top-bar"]:where(:not(:has(ul ul ul))) > ul > li > ul {
     box-sizing: border-box;
-    padding-left: var(--base-border-width);
+    padding-left: var(--top-bar-dropdown-border-width);
     max-height: calc(100dvh - var(--header-final-height));
-    box-shadow: inset var(--base-border-width) 0 0 transparent;
+    box-shadow: inset var(--top-bar-dropdown-border-width) 0 0 transparent;
     transition: opacity var(--header-link-transition-2nd), box-shadow var(--header-link-transition-1st);
     overflow-y: auto;
 }
@@ -570,7 +571,7 @@
 #top-bar div[class*="top-bar"]:where(:not(:has(ul ul ul))) > ul > li:hover > ul,
 #top-bar div[class*="top-bar"]:where(:not(:has(ul ul ul))) > ul > li > ul:focus-within,
 #top-bar div[class*="top-bar"]:where(:not(:has(ul ul ul))) > ul > li > ul:hover {
-    box-shadow: inset var(--base-border-width) 0 0 rgb(var(--top-bar-link-background-hover-alt));
+    box-shadow: inset var(--top-bar-dropdown-border-width) 0 0 rgb(var(--top-bar-link-background-hover-alt));
     transition: opacity var(--header-link-transition-1st), box-shadow var(--header-link-transition-2nd);
 }
 
@@ -581,7 +582,7 @@
     position: absolute;
     inset-block-start: 0;
     inset-inline-start: 0;
-    width: var(--base-border-width);
+    width: var(--top-bar-dropdown-border-width);
     height: 0;
     background-color: rgb(var(--top-bar-link-background-hover-alt));
     transition: height var(--header-link-transition-2nd);
