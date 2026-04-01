@@ -1333,7 +1333,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     padding: 0.25em 0.475em;
     flex-grow: 1;
     background-color: rgb(var(--tag-background-color), var(--basalt-UI-opacity));
-    border-radius: 0.5rem;
+    border-radius: var(--base-border-radius);
     box-shadow: 0 0 0 0 rgb(var(--basalt-focus-color));
     transition: all var(--button-hover-transition);
 }
