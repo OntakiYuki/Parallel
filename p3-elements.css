@@ -919,14 +919,16 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     --_border: none;
     font-size: calc(var(--true-font-size)*0.95);
     animation: 0.1325s blt-hover-in forwards;
+    pointer-events: none;
 }
+
 @keyframes blt-hover-in {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
 .hovertip .content {
-    padding: 0.325em 0.5em;
+    padding: 0.5em 0.5em 0.325em;
 }
 .hovertip .content .footnote .f-heading,
 .hovertip .content .reference .r-heading {
