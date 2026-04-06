@@ -11,6 +11,10 @@ body {
 
 li, p { line-height: inherit; }
 
+p:has(iframe) {
+    margin-block: 0;
+}
+
 code, .code, .code pre, .code p, tt {
     font-family: var(--mono-font);
     font-size: 1em;
