@@ -1,5 +1,5 @@
 /*-------------------*/
-/*--- ACTION AREA ---*/
+/*--- アクションエリア ---*/
 /*-------------------*/
 
 #action-area p {
@@ -117,7 +117,7 @@ div:where(#action-area, .buttons) :is(a, input).btn:is(:hover, :focus),
 
 
 /*---------------*/
-/*--- EDITBOX ---*/
+/*--- 編集ボックス ---*/
 /*---------------*/
 
 form#edit-page-form {
@@ -438,7 +438,7 @@ form[id] div.wd-editor-toolbar-panel ul li:is(:hover, :focus-within) ul {
     --edit-area-toolbar-icon-mask: var(--bib-cite-mask);
 }
 
-/* Edit area */
+/* 編集エリア */
 form:is(#edit-page-form, #new-post-form) > div:nth-of-type(2) { min-width: 100%; }
 #edit-page-textarea, #np-text {
     min-width: inherit;
@@ -457,7 +457,7 @@ form:is(#edit-page-form, #new-post-form) > div:nth-of-type(2) { min-width: 100%;
     border-color: rgb(var(--basalt-focus-color));
 }
 
-/* Size buttons + help area */
+/* サイズボタン&ヘルプエリア */
 form .change-textarea-size {
     float: none;
     display: flex;
@@ -587,7 +587,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
     font-variant-numeric: tabular-nums;
 }
 
-/* Save button area */
+/* 保存ボタンエリア */
 #edit-page-form > div.buttons.alignleft {
     --_gap: .625rem;
     display: grid;
@@ -614,7 +614,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 }
 
 /*------------*/
-/*--- RATE ---*/
+/*--- 評価 ---*/
 /*------------*/
 
 #action-area > p > a[onclick*="PageRateModule.listeners"] {
@@ -659,7 +659,7 @@ form#edit-page-form table.edit-page-bottomtable tr td > div.sub {
 }
 
 /*------------*/
-/*--- TAGS ---*/
+/*--- タグ ---*/
 /*------------*/
 
 form[onsubmit*="PageTagsModule"] > table.form {
@@ -684,7 +684,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
 
 
 /*---------------*/
-/*--- HISTORY ---*/
+/*--- 履歴 ---*/
 /*---------------*/
 
 #history-form-1 {
@@ -1128,7 +1128,7 @@ form[onsubmit*="PageTagsModule"] > table.form > tbody > tr:focus-within > td:fir
     padding-top: 0.375em;
 }
 
-/* Recent Changes */
+/* 最近の更新 */
 
 div.site-changes-box {
     margin: 0.5rem 0;
@@ -1401,7 +1401,7 @@ form[onsubmit*="setParent"] > table.form,
 }
 
 /*-------------*/
-/*--- FILES ---*/
+/*--- ファイル ---*/
 /*-------------*/
 
 #action-area table.page-files {
@@ -1513,7 +1513,7 @@ input#upload-userfile::file-selector-button {
 }
 
 /*------------------*/
-/*--- SITE TOOLS ---*/
+/*--- サイトツール ---*/
 /*------------------*/
 
 #site-tools-box {
@@ -1566,7 +1566,7 @@ input#upload-userfile::file-selector-button {
 
 
 /*---------------------*/
-/*--- EDIT SECTIONS ---*/
+/*--- セクションを編集 ---*/
 /*---------------------*/
 
 #edit-section-content {
@@ -1592,7 +1592,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 
 
 /*-----------------*/
-/*--- EDIT META ---*/
+/*--- メタを編集 ---*/
 /*-----------------*/
 
 #action-area > h1 + p + h2 + div[style*="padding-left"] {
@@ -1642,7 +1642,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 
 
 /*----------------*/
-/*--- WATCHERS ---*/
+/*--- ウォッチャー ---*/
 /*----------------*/
 
 #action-area > ul[style="list-style: none"] {
@@ -1655,7 +1655,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 
 
 /*-----------------*/
-/*--- BACKLINKS ---*/
+/*--- バックリンク ---*/
 /*-----------------*/
 
 #action-area > h1 + h2 + ul,
@@ -1709,7 +1709,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 }
 
 /*-------------------*/
-/*--- PAGE SOURCE ---*/
+/*--- ページソース ---*/
 /*-------------------*/
 
 #action-area .page-source {
@@ -1721,7 +1721,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 }
 
 /*--------------*/
-/*--- PARENT ---*/
+/*--- 親ページ ---*/
 /*--------------*/
 #action-area div.autocomplete-container.yui-ac { width: 100%!important; }
 
@@ -1739,7 +1739,7 @@ a.edit-section-button + :is(h1,h2,h3,h4,h5,h6) {
 }
 
 /*---------------------*/
-/*--- RENAME/DELETE ---*/
+/*--- リネーム/削除 ---*/
 /*---------------------*/
 
 #rename-option-rename > p > :is(#rename-show-backlinks, #rename-hide-backlinks) {
