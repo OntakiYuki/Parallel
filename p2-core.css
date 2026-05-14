@@ -1,4 +1,4 @@
-/* == 变量 == */
+/* == 変数 == */
 
 :root {
     --basalt-primary-color: 254, 254, 254;
@@ -27,10 +27,10 @@
     --link-visited-color: var(--basalt-dark-element-color);
     --link-newpage-color: var(--basalt-alternate-color);
 
-    --header-font-primary: 'Lexend', 'Noto Sans SC';
-    --UI-font-primary: 'Jost', 'Noto Sans SC';
-    --body-font-primary: 'Inter', 'Noto Sans SC';
-    --mono-font-primary: 'JetBrains Mono', 'Noto Serif SC';
+    --header-font-primary: 'Lexend', 'Noto Sans JP';
+    --UI-font-primary: 'Jost', 'Noto Sans JP';
+    --body-font-primary: 'Inter', 'Noto Sans JP';
+    --mono-font-primary: 'JetBrains Mono', 'Noto Serif JP';
     --header-font-fallback: sans-serif;
     --UI-font-fallback: sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     --body-font-fallback: sans-serif;
@@ -41,7 +41,7 @@
     --mono-font: var(--mono-font-primary), var(--mono-font-fallback);
 
     --header-logo: var(--logo);
-    --logo: url("https://nu-scptheme.github.io/Black-Highlighter/img/logo.svg");
+    --logo: url("https://scp-jp.github.io/Black-Highlighter/img/logo.svg");
     --header-logo-size: contain;
     --header-logo-position: center left;
     --header-logo-mask: linear-gradient(to right, #000 0%, transparent 85%);
@@ -49,10 +49,10 @@
     --header-logo-mask-position: center;
     --header-logo-right-margin: calc(var(--base-header-height) * -0.35);
     --header-title: var(--title);
-    --title: "SCP基金会";
+    --title: "SCP財団";
     --header-title-color: var(--basalt-primary-color);
     --header-subtitle: var(--subtitle);
-    --subtitle: "控制，收容，保护";
+    --subtitle: "確保、収容、保護";
     --header-subtitle-color: var(--basalt-secondary-color);
     --header-subtitle-letter-spacing: 0.2rem;
     --title-size: 2rem;
@@ -227,11 +227,11 @@
     --edit-area-main-background-color: var(--basalt-background-color);
     --edit-area-ancillary-background-color: var(--basalt-secondary-color);
 
-    --pager-previous-button: "« 上一页";
-    --pager-next-button: "下一页 »";
+    --pager-previous-button: "« 前のページ";
+    --pager-next-button: "次のページ »";
 }
 
-/* == 内容区域 == */
+/* == ページエリア == */
 
 #container {
     display: flex;
@@ -254,7 +254,7 @@
     min-height: calc(100vh - var(--header-final-height) - var(--main-content-top-margin) - 2.325em - var(--main-content-bottom-margin) - var(--bottom-area-padding) *2.5 - var(--true-font-size) *5.75);
 }
 
-/* == 版头 == */
+/* == ヘッダー == */
 
 #header {
     display: grid;
@@ -286,7 +286,7 @@
     text-decoration: none;
 }
 
-/* -- H1 标题 -- */
+/* -- H1タイトル -- */
 
 #header h1 {
     display: grid;
@@ -358,7 +358,7 @@
     letter-spacing: var(--header-subtitle-letter-spacing);
 }
 
-/* -- 顶部导航 -- */
+/* -- トップナビゲーションバー -- */
 
 #top-bar,
 #top-bar div.top-bar,
@@ -675,7 +675,7 @@
     width: 100%;
 }
 
-/* 多级菜单支持 */
+/* 多重ネストトップバーサポート */
 #top-bar div[class*='top-bar'] ul li ul li ul {
     position: absolute;
     top: 0;
@@ -712,7 +712,7 @@
     color: rgb(var(--top-bar-link-color));
 }
 
-/* -- 登录状态栏 -- */
+/* -- ログインステータス -- */
 
 #login-status {
     grid-area: user;
@@ -793,7 +793,7 @@ a#account-topbutton, a#my-account {
     display: none;
 }
 
-/* 私信提醒 */
+/* PM通知 */
 
 #login-status > a[href*='account/messages'] {
     display: block;
@@ -877,7 +877,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     width: 100%;
 }
 
-/* 登出 */
+/* ログアウト */
 
 #login-status > a:first-child + span {
     display: block;
@@ -927,7 +927,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     inset-inline-end: calc(var(--login-status-width)/2);
 }
 
-/* -- 搜索 -- */
+/* -- 検索 -- */
 
 #search-top-box {
     display: flex;
@@ -1023,7 +1023,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     pointer-events: auto;
 }
 
-/* -- 侧面导航 -- */
+/* -- サイドナビゲーションバー -- */
 
 #top-bar div.mobile-top-bar > .open-menu {
     visibility: hidden;
@@ -1303,7 +1303,7 @@ div#account-options > ul > li > a:is(:hover, :focus)::before,
     width: 100%;
 }
 
-/* == 页底区域 == */
+/* == ページフッターエリア == */
 
 #footer {
     display: grid !important;
@@ -1426,7 +1426,7 @@ div#license-area {
     text-align: center;
 }
 
-/* == 移动适配 -- */
+/* == メディアクエリ -- */
 
 @media only screen and (max-width: 1024px) {
     :root {
@@ -1471,7 +1471,7 @@ div#license-area {
         height: 100%;
     }
 
-    /* -- 移动端侧面导航 -- */
+    /* -- トップナビゲーションバー移動 -- */
 
     #top-bar div.mobile-top-bar > .open-menu {
         visibility: visible;
