@@ -1,6 +1,6 @@
-/* == 自定义元素 == */
+/* == カスタム要素 == */
 
-/* -- 自定义表格 -- */
+/* -- カスタムテーブル -- */
 
 :where(#page-content) :is(.table.wide, .table.three-lines) table.wiki-content-table {
     width: 100%;
@@ -57,7 +57,7 @@
     --basalt-undertone: var(--six-color);
 }
 
-/* -- 旧版引用块和相关容器 -- */
+/* -- 従来の引用ブロックおよび参照ブロック -- */
 
 :where(#page-content) .blockquote.wide {
     --_max-width: 100%;
@@ -146,7 +146,7 @@
     z-index: 1;
 }
 
-/* 页面顶部提示信息 */
+/* ページ上部警告ブロック */
 
 div#page-content div#u-adult-warning,
 div#page-content div#u-component-top-box {
@@ -165,9 +165,9 @@ div#page-content div#u-component-top-box + hr {
     display: none;
 }
 
-/* == 组件支持 == */
+/* == コンポーネントサポート == */
 
-/* -- ACS支持 -- */
+/* -- ACSサポート -- */
 
 div.Parallel-ACS {
     --one-color: 134, 227, 206;
@@ -185,7 +185,7 @@ div.Parallel-ACS {
     --swatch-background: var(--basalt-background-color);
 }
 
-/* -- AIM支持 -- */
+/* -- AIMサポート -- */
 
 :root {
     --AIM-border-color: var(--basalt-tertiary-color);
@@ -224,7 +224,7 @@ div.Parallel-AIM div[class$="aim"] .w-cell:nth-child(1) {
     border-left-width: 0;
 }
 
-/* -- Earthworm导航支持 -- */
+/* -- Earthwormナビゲーションサポート -- */
 
 div#page-content div.earthworm div.first:not(.true),
 div#page-content div.earthworm div.last:not(.true) {
@@ -282,7 +282,7 @@ div#page-content div.earthworm a[href="/"] {
     color: rgb(var(--basalt-main-text-color));
 }
 
-/* -- 灰暗之镜支持 -- */
+/* -- ダークミラーサポート -- */
 
 div[style*="z-index:999;"] div#mainBoard {
     color: rgb(var(--basalt-main-text-color));
@@ -424,9 +424,9 @@ div[style*="z-index:999;"] div#textWindow {
 }
 }
 
-/* == 工具类 == */
+/* == ユーティリティクラス == */
 
-/* -- 通用 -- */
+/* -- ユニバーサル -- */
 
 .t-left {
     text-align: left;
@@ -444,7 +444,7 @@ div[style*="z-index:999;"] div#textWindow {
     overflow-x: auto;
 }
 
-/* -- Blockquote 元素 -- */
+/* -- Blockquote要素 -- */
 
 div.w-125 {
     --_relative-width: .125;
@@ -607,7 +607,7 @@ div.color-light {
     color: rgb(var(--basalt-light-text-color));
 }
 
-/* -- 表格元素 --*/
+/* -- テーブル要素 --*/
 
 .table[class*="w-"] :is(table, table.wiki-content-table) {
     width: 100%;
