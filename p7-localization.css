@@ -1,11 +1,14 @@
-:root:where(:lang(cn)),
-:root:where(:lang(zh-CN)) {
+:root:where(:is(:lang(cn),:lang(zh-CN))) {
 	--title: "SCP基金会";
 	--subtitle: "控制，收容，保护";
 }
 
-:root:where(:lang(zh)),
-:root:where(:lang(zh-TR)) {
+:root:where(:is(:lang(zh),:lang(zh-TR))) {
 	--title: "SCP基金會";
 	--subtitle: "控制，收容，保護";
+}
+
+:root:where(:is(:lang(ja),:lang(ja-corrections))) {
+	--title: "SCP財団";
+	--subtitle: "確保、収容、保護";
 }
