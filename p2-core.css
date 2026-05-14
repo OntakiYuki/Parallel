@@ -1522,7 +1522,7 @@ div#license-area {
     }
 }
 
-/* == 低动画模式 == */
+/* == 低アニメーションモードサポート == */
 
 @media screen and (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -1532,7 +1532,7 @@ div#license-area {
 }
 
 
-/* == 打印支持 == */
+/* == 印刷モードサポート == */
 
 div#print-options {
     font-size: var(--true-font-size);
