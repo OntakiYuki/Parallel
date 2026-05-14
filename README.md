@@ -8,4 +8,4 @@
 
 **著作権者:** [https://github.com/Hormress](Hormress氏)
 
-**翻訳者:** [https://www.wikidot.com/user:info/takion00](takion00) (Githubのtakion00氏とは関係がありません。Githubのアカウントは[https://github.com/OntakiYuki](OntakiYuki/温焚雪)です。)
+**翻訳者:** [https://www.wikidot.com/user:info/takion00](takion00)(Githubのtakion00氏とは関係がありません。Githubのアカウントは[https://github.com/OntakiYuki](OntakiYuki/温焚雪)です。)
