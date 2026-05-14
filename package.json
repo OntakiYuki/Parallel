@@ -3,11 +3,12 @@
   "description": "SCP-CN Wiki theme (build process)",
   "version": "2.0.0",
   "authors": "Dr Hormress",
+  "translater": "takion00",
   "license": "CC BY-SA 4.0 International",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Hormress/Parallel"
+    "url": "https://github.com/SCP-JP/Parallel"
   },
   "devDependencies": {
     "minify": "^9.2.0"
