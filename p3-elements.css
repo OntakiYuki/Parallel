@@ -1,4 +1,4 @@
-/* == 基本元素 == */
+/* == 基本要素 == */
 
 body {
     color: rgb(var(--basalt-main-text-color));
@@ -34,7 +34,7 @@ img, table, iframe {
 
 #page-content div { max-width: 100%; }
 
-/* 滚动条 */
+/* スクロールバー */
 * {
     scrollbar-width: thin;
     scrollbar-color: rgb(var(--scrollbar-thumb-color)) rgb(var(--scrollbar-track-color));
@@ -50,13 +50,13 @@ img, table, iframe {
     background-color: rgb(var(--scrollbar-thumb-color));
 }
 
-/* 选区 */
+/* セレクション */
 ::selection {
     background-color: rgb(var(--selection-background-color), 0.875);
     color: rgb(var(--selection-text-color));
 }
 
-/* 锚点跳转 */
+/* アンカージャンプ */
 :where(#main-content) [id] {
     scroll-margin-top: var(--header-final-height);
 }
@@ -64,7 +64,7 @@ img, table, iframe {
     :where(#main-content) [id] { --header-final-height: var(--top-bar-mobile-height); }
 }
 
-/* == 标题 == */
+/* == タイトル == */
 
 h1,h2,h3,h4,h5,h6 {
     color: inherit;
@@ -80,7 +80,7 @@ h4 { font-size: 1.325em; }
 h5 { font-size: 1.15em; }
 h6 { font-size: 1em; }
 
-/* == 链接 == */
+/* == リンク == */
 
 a:any-link {
     color: rgb(var(--link-color));
@@ -98,12 +98,12 @@ a.newpage {
     color: rgb(var(--link-newpage-color));
 }
 
-/* 折叠链接 */
+/* 折り畳み構文 */
 #page-content a.collapsible-block-link {
     overflow-wrap: anywhere;
 }
 
-/* == 按钮 == */
+/* == ボタン == */
 
 div.buttons input, input[type="button"], input[type="submit"], button {
     appearance: none;
@@ -124,7 +124,7 @@ div.buttons input, input[type="button"], input[type="submit"], button {
     outline-width: 0.25rem;
 }
 
-/* == INPUT 元素 == */
+/* == INPUT要素 == */
 
 input[type="checkbox"], [type="radio"] {
     appearance: none;
@@ -197,7 +197,7 @@ select:focus {
     outline-width: 0.175rem;
 }
 
-/* == 表格 == */
+/* == テーブル == */
 
 table td {
     text-align: start;
@@ -225,7 +225,7 @@ table td {
     padding: 0.5em 0.625em;
 }
 
-/* == 分割线 == */
+/* == 区切り線 == */
 
 hr {
     height: var(--base-border-width);
@@ -233,7 +233,7 @@ hr {
     background-color: rgb(var(--hr-color));
 }
 
-/* == 评分与信息栏 == */
+/* == 評価モジュール&クレジット付き評価モジュール == */
 
 .creditRate > .rateBox,
 .rate-box-with-credit-button > .page-rate-widget-box {
@@ -251,7 +251,7 @@ div.creditRate .rateBox {
     display: contents;
 }
 
-div.page-rate-widget-box, div.rate-box-with-credit-button {
+#page-content :is(div.page-rate-widget-box,div.rate-box-with-credit-button) {
     display: inline-flex;
     box-shadow: none;
     background-color: rgb(var(--rate-module-background-color));
@@ -305,7 +305,7 @@ div.creditRate > p {
 }
 
 div.page-rate-widget-box span.btn > a,
-div.rate-box-with-credit-button .creditButton > p > a {
+div.rate-box-with-credit-button .creditButton a {
     display: block;
     position: relative;
     width: 100%; height: 100%;
@@ -332,12 +332,12 @@ div.creditButtonStandalone > p > a {
 }
 
 div.page-rate-widget-box span.btn > a,
-div.rate-box-with-credit-button .creditButton > p > a {
+div.rate-box-with-credit-button .creditButton a {
     border-bottom: solid var(--base-border-width) transparent;
 }
 
 div.page-rate-widget-box span.btn > a::before,
-div.rate-box-with-credit-button .creditButton > p > a::after,
+div.rate-box-with-credit-button .creditButton a::after,
 div.creditButtonStandalone > p > a::before,
 div.creditButtonStandalone > p > a::after {
     content: "";
@@ -351,22 +351,22 @@ div.creditButtonStandalone > p > a::after {
     transition: background-color 0.095s linear;
 }
 
-div.rate-box-with-credit-button .creditButton > p > a::before,
+div.rate-box-with-credit-button .creditButton a::before,
 div.creditButtonStandalone > p > a::before {
     display: none;
 }
 
-div.rate-box-with-credit-button .creditButton > p > a::after,
+div.rate-box-with-credit-button .creditButton a::after,
 div.creditButtonStandalone > p > a::after {
     background-color: rgb(var(--rate-module-info-icon-color));
 }
 
-div.rate-box-with-credit-button .creditButton > p > a:hover {
+div.rate-box-with-credit-button .creditButton a:hover {
     border-block-end-color: rgb(var(--rate-module-credit-color));
 }
 
 div.page-rate-widget-box span.btn > a::before,
-div.rate-box-with-credit-button .creditButton > p > a::after,
+div.rate-box-with-credit-button .creditButton a::after,
 div.creditButtonStandalone > p > a::after {
     -webkit-mask-size: 40%;
     mask-size: 40%;
@@ -387,7 +387,7 @@ div.page-rate-widget-box span.cancel > a::before {
     -webkit-mask-image: var(--vote-cancel-mask);
     mask-image: var(--vote-cancel-mask);
 }
-div.rate-box-with-credit-button .creditButton > p > a::after,
+div.rate-box-with-credit-button .creditButton a::after,
 div.creditButtonStandalone > p > a::after {
     -webkit-mask-image: var(--vote-info-mask);
     mask-image: var(--vote-info-mask);
@@ -404,7 +404,7 @@ div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus)::before { backgr
 div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before,
 div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-focus-color)); }
 
-/* 信息栏 */
+/* クレジットモーダル */
 
 #u-credit-view, #u-credit-otherwise {
     justify-content: center;
@@ -512,7 +512,7 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     margin-block-end: 0.5rem;
 }
 
-/* == 图片块 == */
+/* == 画像ブロック == */
 
 #page-content :is(.image-block, .scp-image-block),
 #page-content :is(.image-block, .scp-image-block) > * {
@@ -557,7 +557,7 @@ div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color
     }
 }
 
-/* == 引用块 == */
+/* == 引用ブロック == */
 
 blockquote, div.blockquote {
     background-color: rgb(var(--blockquote-background-color));
@@ -629,7 +629,7 @@ div.wiki-note {
     border: 0.05em solid currentColor;
 }
 
-/* == 代码块 == */
+/* == コードブロック == */
 
 .code {
     background-color: rgb(var(--code-background-color));
@@ -670,7 +670,7 @@ div.wiki-note {
 .code .hl-quotes { color: rgb(var(--_quotes)); }
 .code .hl-var { color: rgb(var(--_var)); }
 
-/* == 目录 == */
+/* == 目次 == */
 
 div#toc {
     max-width: calc(var(--main-content-width)*0.375);
@@ -693,7 +693,7 @@ div#toc {
     margin: 0.25rem 1.5rem 0.25rem 0;
 }
 
-/* 非浮动目录 */
+/* 固定目次 */
 table[style^="margin:0;"][style*="margin:0;"],
 table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     display: contents;
@@ -747,7 +747,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 #toc-list > div[style*="5em"] { font-size: 0.835em; --toc-entry-indent: 5.075em; }
 #toc-list > div[style*="6em"] { font-size: 0.775em; --toc-entry-indent: 6.25em; }
 
-/* == YUI TAB == */
+/* == YUIタブ == */
 
 .yui-navset,
 .yui-navset.yui-navset-top {
@@ -830,7 +830,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     background-color: transparent;
 }
 
-/* == 脚注和参考文献 == */
+/* == 脚注&参考文献 == */
 
 .bibitems, .footnotes-footer {
     position: relative;
@@ -969,7 +969,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     color: rgb(var(--basalt-sub-text-color));
 }
 
-/* == 用户展示 == */
+/* == ユーザーアバター == */
 
 .printuser a { margin-right: 0; }
 
@@ -1003,7 +1003,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     display: none;
 }
 
-/* == OWINDOW 悬浮窗口 == */
+/* == OWINDOWポップアップウィンドウ == */
 
 .odialog-shader,
 .odialog-shader-iframe {
@@ -1185,7 +1185,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     }
 }
 
-/* -- 用户信息块 -- */
+/* -- ユーザー情報ブロック -- */
 
 .owindow > *:not(.button-bar,.title) > img {
     float: none!important;
@@ -1236,7 +1236,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     --button-text-color: var(--basalt-cancel-color);
 }
 
-/* 标记用户 */
+/* ユーザーフラグ */
 :is(#flag-user-options-flag, #flag-user-options-unflag):not([style*="none"]) {
     display: flex!important;
     margin: 0;
@@ -1276,7 +1276,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 #flag-user-options-flag a.flag-user-abusive { --button-text-color: var(--basalt-negative-color); }
 #flag-user-options-unflag a.unflag-user-ok { --button-text-color: var(--basalt-positive-color); }
 
-/* == 内容区域 == */
+/* == ページ内容エリア == */
 
 #page-title, .meta-title {
     font-family: var(--header-font);
@@ -1310,7 +1310,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
     text-align: center;
 }
 
-/* == 页面标签区域 == */
+/* == ページタグエリア == */
 
 #main-content > .page-tags {
     display: flex;
@@ -1353,7 +1353,7 @@ table[style^="margin:0;"][style*="margin:0;"] :is(tbody, tr, td) {
 
 #main-content > .page-tags > span a[href^='/system:page-tags/tag/_'] { display: none; }
 
-/* == 页底选项栏 == */
+/* == フッター下部オプション == */
 
 #page-info-break {
     height: 1rem;
@@ -1473,7 +1473,7 @@ div[id*="page-options-bottom"] > a:is(:hover,:focus) {
     }
 }
 
-/* == 特殊元素 == */
+/* == 特殊要素 == */
 
 .licensebox a.collapsible-block-link {
     color: rgb(var(--basalt-sub-text-color));
