@@ -7,4 +7,5 @@
 このリポジトリは、開発中の**平行テーマ**のコード統合バージョンです。このバージョンが完成すれば、平行テーマは**Bedrockテーマ**のコードへの直接参照に依存しなくなります。
 
 **著作権者:** [https://github.com/Hormress](Hormress氏)
+
 **翻訳者:** [https://www.wikidot.com/user:info/takion00](takion00)(Githubのtakion00氏とは関係がありません。Githubのアカウントは[https://github.com/OntakiYuki](OntakiYuki/温焚雪)です。)
