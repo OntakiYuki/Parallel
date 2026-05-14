@@ -1,4 +1,4 @@
-/* == 论坛样式 == */
+/* == フォーラムスタイル == */
 .forum-thread-box {
 	margin: 0;
 }
@@ -40,7 +40,7 @@
 	border: solid var(--base-border-width) rgb(var(--general-border-color));
 }
 
-/* == 讨论串 == */
+/* == スレッド == */
 
 #thread-container-posts {
 	display: flex;
@@ -196,7 +196,7 @@
 	margin-inline-end: .25ch;
 }
 
-/* == 讨论编辑框 == */
+/* == 投稿編集画面 == */
 
 #new-post-div {
 	padding: 1rem 0;
