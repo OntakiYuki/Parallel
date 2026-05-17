@@ -2233,8 +2233,10 @@ div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus) { border-color: 
 div.page-rate-widget-box span.btn.rateup > a:is(:hover, :focus)::before { background-color: rgb(var(--rate-module-upvote-color)); }
 div.page-rate-widget-box span.btn.ratedown > a:is(:hover, :focus)::before { background-color: rgb(var(--rate-module-downvote-color)); }
 div.page-rate-widget-box span.btn.cancel > a:is(:hover, :focus)::before { background-color: rgb(var(--rate-module-cancel-color)); }
-div.rate-box-with-credit-button .creditButton > p > a:is(:hover, :focus)::before,
+div.rate-box-with-credit-button .creditButton a:is(:hover, :focus)::before,
 div.creditButtonStandalone > p > a:is(:hover, :focus)::before { background-color: rgb(var(--basalt-focus-color)); }
+
+div.credit-license a.cc.cc-by-sa:is(:any-link, :hover, :focus) { color: rgb(var(--basalt-main-text-color)); } 
 
 /* クレジットモーダル */
 
